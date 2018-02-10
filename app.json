@@ -16,7 +16,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#bd3027",
-    "navigationBarTitleText":"喜卡"
+    "navigationBarTitleText":"撸宠"
   },
   "tabBar": {
     "color": "#6e6d6b",
@@ -27,27 +27,21 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "images/xiche/tab1-off.png",
-        "selectedIconPath": "images/xiche/tab1-on.png",
-        "text": "购卡"
+        "iconPath": "images/luchong/tab1-off.png",
+        "selectedIconPath": "images/luchong/tab1-on.png",
+        "text": "首页"
       },
       {
         "pagePath": "pages/card-list/index",
-        "iconPath": "images/xiche/tab2-off.png",
-        "selectedIconPath": "images/xiche/tab2-on.png",
-        "text": "核销"
-      },
-      {
-        "pagePath": "pages/merchant-list/index",
-        "iconPath": "images/xiche/tab3-off.png",
-        "selectedIconPath": "images/xiche/tab3-on.png",
-        "text": "附近"
+        "iconPath": "images/luchong/tab2-off.png",
+        "selectedIconPath": "images/luchong/tab2-on.png",
+        "text": "萌宠"
       },
       {
         "pagePath": "pages/person-center/index",
-        "iconPath": "images/xiche/tab4-off.png",
-        "selectedIconPath": "images/xiche/tab4-on.png",
-        "text": "个人中心"
+        "iconPath": "images/luchong/tab4-off.png",
+        "selectedIconPath": "images/luchong/tab4-on.png",
+        "text": "朕"
       }
     ]
   },

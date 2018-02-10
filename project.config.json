@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.7.0",
 	"appid": "touristappid",
-	"projectname": "luchong",
+	"projectname": "luchong-formal",
 	"condition": {
 		"search": {
 			"current": -1,
