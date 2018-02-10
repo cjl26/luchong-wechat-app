@@ -1,0 +1,144 @@
+.container {
+	font-family: "微软雅黑";
+}
+
+.search-container {
+	height: 115rpx;
+	/*background-color: cornflowerblue;*/
+}
+
+.img-search-input {
+	width: 465rpx;
+	height: 60rpx;
+	position: absolute;
+	top: 33rpx;
+	left: 40rpx;
+}
+
+.img-search-date {
+	width: 60rpx;
+	height: 60rpx;
+	position: absolute;
+	top: 33rpx;
+	right: 58rpx;
+}
+
+.img-search-button {
+	width: 100rpx;
+	height: 60rpx;
+	position: absolute;
+	top: 33rpx;
+	left: 500rpx;
+}
+
+.search-container input {
+	width: 422rpx;
+	height: 52rpx;
+	position: absolute;
+	top: 33rpx;
+	left: 47rpx;
+	padding-left: 22rpx;
+	padding-right: 14rpx;
+	padding-top: 4rpx;
+	padding-bottom: 4rpx;
+	font-size: 31rpx;
+}
+
+.transaction-list {
+	display: flex;
+	/*height: 1091rpx;*/
+	width: 100%;
+}
+
+.transaction-list-item {
+	width: 700rpx;
+	/*height: 207rpx;*/
+	background-color: white;
+	margin-bottom: 20rpx;
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+	display: flex;
+	flex-direction: column;
+	padding: 15rpx;
+}
+
+.no-more-goods {
+	/* margin-top: 20rpx; */
+	text-align: center;
+	font-size: 29rpx;
+	padding-bottom: 48rpx;
+	color: #999;
+	width: 750rpx;
+}
+
+.first-row {
+	/*flex-grow: 1;*/
+	width: 700rpx;
+	/*height: 55rpx;*/
+	display: flex;
+}
+
+.second-row {
+	/*flex-grow: 2;*/
+	display: flex;
+	width: 700rpx;
+	/*height: 98rpx;*/
+	font-size:28rpx;
+	padding-top: 10rpx;
+}
+
+.third-row {
+	/*flex-grow: 1;*/
+	display: flex;
+	width: 700rpx;
+	/*height: 55rpx;*/
+}
+
+.service-name {
+	font-size:28rpx;
+	padding-top: 10rpx;
+}
+
+.transaction-date {
+	flex-grow: 1;
+	font-size: 26rpx;	
+}
+
+.merchant-name {
+	flex-grow: 1;
+	font-size: 32rpx;
+	text-align: right;	
+}
+
+.phone {
+	flex-grow: 1;
+	font-size: 26rpx;
+	padding-top: 10rpx;
+}
+
+.car-licese {
+	flex-grow: 1;
+	font-size: 26rpx;
+	padding-top: 10rpx;
+}
+
+.transaction-time {
+	flex-grow: 1;
+	text-align: right;
+}
+
+.transaction-time-transaction {
+	font-size: 26rpx;
+	margin-left: 10rpx;
+	
+}
+
+.transaction-time-time {
+	color: #bd3027;
+	margin-left: 10rpx;
+}
+
+.left-time {
+	flex-grow: 1;
+	text-align: right;
+}

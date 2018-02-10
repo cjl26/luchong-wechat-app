@@ -1,0 +1,124 @@
+<view style="height:{{scrollHeight}}px;background-color: #f9f3f3;" class='container'>
+  <view class='search-container' wx:if='{{userCardId == null || userCardId == ""}}'>
+    <image class="img-search-input" src='/images/transaction-list/search_input.png'></image>
+    <image class="img-search-button" src='/images/transaction-list/search_button.png' bindtap="search"></image>   
+    <picker mode="date" value="{{date}}"  bindchange="bindDateChange">
+    	<image class="img-search-date" src='/images/transaction-list/dateselect.png'></image>   
+    </picker>
+    <input value="{{searchWord}}" bindinput="searchWordInput"></input>
+  </view>
+  <scroll-view class="transaction-list" bindscrolltolower="loadmore" scroll-y="true" style="height: {{scrollViewHeight}}rpx;" >
+  	<!--<view class='transaction-list-item'>
+      <view class="first-row">
+        <view class='transaction-date'>2017/12/12 12:00</view>
+        <view class='merchant-name'>车天下旗舰店</view>
+      </view>
+      <view class="second-row">
+        汕头市朝阳区百欣中学正对面车天下期间体验馆商家地址商家地址
+      </view>
+       <view class="service-name">
+      	服务名称
+      </view>
+      <view class="third-row">
+         <view class="phone">13812345678</view>
+         <view class="car-licese">粤DW9255</view>
+         <view class="transaction-time"><text class="transaction-time-transaction">服务</text><text class="transaction-time-time">1</text></view>
+         <view class="left-time"><text class="transaction-time-transaction">剩余</text><text class="transaction-time-time">90</text></view>
+      </view>
+    </view>
+    <view class='transaction-list-item'>
+      <view class="first-row">
+        <view class='transaction-date'>2017/12/12 12:00</view>
+        <view class='merchant-name'>车天下旗舰店</view>
+      </view>
+      <view class="second-row">
+        汕头市朝阳区百欣中学正对面车天下期间体验馆商家地址商家地址
+      </view>
+       <view class="service-name">
+      	服务名称
+      </view>
+      <view class="third-row">
+         <view class="phone">13812345678</view>
+         <view class="car-licese">粤DW9255</view>
+         <view class="transaction-time"><text class="transaction-time-transaction">服务</text><text class="transaction-time-time">1</text></view>
+         <view class="left-time"><text class="transaction-time-transaction">剩余</text><text class="transaction-time-time">90</text></view>
+      </view>
+    </view>
+    <view class='transaction-list-item'>
+      <view class="first-row">
+        <view class='transaction-date'>2017/12/12 12:00</view>
+        <view class='merchant-name'>车天下旗舰店</view>
+      </view>
+      <view class="second-row">
+        汕头市朝阳区百欣中学正对面车天下期间体验馆商家地址商家地址
+      </view>
+       <view class="service-name">
+      	服务名称
+      </view>
+      <view class="third-row">
+         <view class="phone">13812345678</view>
+         <view class="car-licese">粤DW9255</view>
+         <view class="transaction-time"><text class="transaction-time-transaction">服务</text><text class="transaction-time-time">1</text></view>
+         <view class="left-time"><text class="transaction-time-transaction">剩余</text><text class="transaction-time-time">90</text></view>
+      </view>
+    </view>
+    <view class='transaction-list-item'>
+      <view class="first-row">
+        <view class='transaction-date'>2017/12/12 12:00</view>
+        <view class='merchant-name'>车天下旗舰店</view>
+      </view>
+      <view class="second-row">
+        汕头市朝阳区百欣中学正对面车天下期间体验馆商家地址商家地址
+      </view>
+       <view class="service-name">
+      	服务名称
+      </view>
+      <view class="third-row">
+         <view class="phone">13812345678</view>
+         <view class="car-licese">粤DW9255</view>
+         <view class="transaction-time"><text class="transaction-time-transaction">服务</text><text class="transaction-time-time">1</text></view>
+         <view class="left-time"><text class="transaction-time-transaction">剩余</text><text class="transaction-time-time">90</text></view>
+      </view>
+    </view>
+    <view class='transaction-list-item'>
+      <view class="first-row">
+        <view class='transaction-date'>2017/12/12 12:00</view>
+        <view class='merchant-name'>车天下旗舰店</view>
+      </view>
+      <view class="second-row">
+        汕头市朝阳区百欣中学正对面车天下期间体验馆
+      </view>
+      <view class="service-name">
+      	服务名称
+      </view>
+      <view class="third-row">
+         <view class="phone">13812345678</view>
+         <view class="car-licese">粤DW9255</view>
+         <view class="transaction-time"><text class="transaction-time-transaction">服务</text><text class="transaction-time-time">1</text></view>
+         <view class="left-time"><text class="transaction-time-transaction">剩余</text><text class="transaction-time-time">90</text></view>
+      </view>     
+    </view>
+-->
+   <block wx:if="{{transactions.length > 0}}" wx:for="{{transactions}}" wx:for-index="transactionIndex" wx:for-item="transaction">
+    <view class="transaction-list-item" wx:for="{{transaction.services}}" wx:for-index="serviceIndex" wx:for-item="service">
+      <view class="first-row">
+        <view class='transaction-date'>{{transaction.create_time}}</view>
+        <view class='merchant-name'>{{transaction.merchantInfo.name}}</view>
+      </view>
+      <view class="second-row">
+        {{transaction.merchantInfo.address}}
+      </view>
+    <!--  <view class="service-name">
+      	{{service.service_name}}
+      </view>-->
+      <view class="third-row">
+         <view class="phone">{{transaction.phone}}</view>
+         <view class="car-licese">{{transaction.car_licence}}</view>
+         <view class="transaction-time"><text class="transaction-time-transaction">{{service.service_name}}服务</text><text class="transaction-time-time">{{service.service_time}}</text></view>
+         <view class="left-time"><text class="transaction-time-transaction">剩余</text><text class="transaction-time-time">{{service.time_after}}</text></view>
+      </view>     
+    </view>
+    </block>
+    <view hidden="{{needLoadMore}}" class="no-more-goods">没有更多啦</view>
+  </scroll-view>
+</view>

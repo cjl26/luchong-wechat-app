@@ -1,0 +1,253 @@
+/**index.wxss**/
+
+.container {
+  background-color: #F2f2f2;
+}
+.swiper-container{
+  width: 750rpx;
+  position: relative;
+}
+.swiper_box {
+  width: 100%;
+  height:282rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  height:282rpx;
+}
+.swiper-container .dots{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+.swiper-container .dots .dot{
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background: #fff;
+  border-radius: 50%;
+  transition: all .6s;
+  opacity: .5;
+}
+.swiper-container .dots .dot.active{
+  width: 14rpx;
+  opacity: 1;
+}
+
+
+.type-navbar-item{
+  border-bottom: 4rpx solid #fff;
+}
+.type-item-on{
+  border-bottom: 4rpx solid #e64340;
+}
+
+
+.no-more-goods{
+
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 24rpx;
+  padding-bottom:250rpx;
+  color: #999;
+}
+
+.type-search{
+  width: 100%;
+  height: 98rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+.type-search image{
+   width: 750rpx;
+   height: 98rpx;
+}
+
+.scroll-list{
+  padding-top: 20rpx;
+}
+
+.scroll-list .a-scroll{
+  border-radius:15px 15px 0px 15px;
+  width: 650rpx;
+  background-color:transparent;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  padding-top: 5px;
+  /* padding: 20rpx;  */
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items:  center;
+}
+.scroll-createtime {
+  margin-top: 20rpx;
+  width: 650rpx;
+  margin-left: 10rpx;
+  color: #444444;
+  font-size: 35rpx;
+}
+.scroll-list .a-scroll .scroll-up{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items:  center;
+  justify-content: space-around;
+  background-color:white;
+  border-radius: 15px 15px 0px 0px;
+}
+.scroll-list .a-scroll .scroll-up .scroll-name{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  padding-left: 15rpx;
+  font-size: 30rpx;
+  flex:1;
+}
+.scroll-list .a-scroll .scroll-up .scroll-time{
+  padding-right: 15rpx;
+  font-size: 30rpx;
+  text-align: right;
+  flex:1;
+}
+
+.scroll-list .a-scroll .scroll-down{
+  width:655rpx;
+  height: 341rpx;
+  border-radius: 0px 0px 15px 15px;
+}
+.scroll-down-enttime{
+  /*width: 400rpx;*/
+  position: relative;
+  color:white;
+  /*left:250rpx;*/
+  padding-left: 250rpx;
+  top:250rpx;
+  font-size:35rpx;
+  line-height: 40rpx;
+}
+.scroll-list .a-scroll .scroll-down .img{
+  position: relative;
+  top:-37rpx;
+  /* margin-top: 5px; */
+  width:655rpx;
+  height: 341rpx;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 99;
+  color: #fff;
+}
+
+.canvas-box{
+  width: 750rpx;
+  height: 880rpx;
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url("http://hicatcitycardimage.6so2o.com/wxappimage/qr_bg.png");
+
+}
+
+
+.canvas-title{
+  width: 750rpx;
+  height: 50rpx;
+  /*margin-top: 20rpx;*/
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+  /*align-items: center;*/
+
+}
+.canvas-title-text{
+  margin-top: 20rpx;
+  position:absolute;
+  left: 0rpx;
+  top:0rpx;
+  width: 750rpx;
+  height: 50rpx;
+  color: white;
+  font-size: 50rpx;
+  text-align: center;
+  /*margin-left: 255rpx;*/
+}
+
+.canvas-title-btn{
+  position:absolute;
+  right: 20rpx;
+  top:0rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+}
+
+.canvas{
+  /*z-index: 100;*/
+  /*position: fixed;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
+  position: absolute;margin:auto; top: 0;left: 0;right: 0;bottom: 0;
+
+  width: 500rpx;
+  height: 500rpx;
+  background:#f1f1f1;
+}
+
+.swiper-container{
+  width: 750rpx;
+  position: fixed;
+  bottom: 0;
+}
+.swiper_box {
+  width: 710rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  height:160rpx;
+}
+
+swiper-item image {
+  width:710rpx;
+  display:inline-block;
+  overflow:hidden;
+  height:160rpx;
+}
+.swiper-container .dots{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+.swiper-container .dots .dot{
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background: white;
+  border-radius: 50%;
+  transition: all .6s;
+  opacity: .5;
+}
+.swiper-container .dots .dot.active{
+  width: 14rpx;
+  opacity: 1;
+}

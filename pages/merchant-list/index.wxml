@@ -1,0 +1,29 @@
+<view class="container">
+    <view class="list" >
+        <view class="scroll-list" hidden="{{scrollViewData ? false : true}}">
+            <view class="a-scroll" wx:for-items="{{scrollViewData}}" wx:key="{{index}}">
+                <view class="order-left"
+                      data-detailpicurl="{{item.detail_picture_url}}" bindtap="toDetailTap">
+                    <image src="{{item.picture_url}}" class="img"/>
+                </view>
+                <view class="order-mid"
+                      data-detailpicurl="{{item.detail_picture_url}}" bindtap="toDetailTap">
+                    <view class="order-name">
+                        <text>{{item.name}}</text>
+                    </view>
+                    <view class="order-detail">
+                        <text>{{item.address}}</text>
+                    </view>
+                </view>
+                <view class="order-right">
+                    <view class="order-distance">
+                        <text> {{item.distance}}</text>
+                    </view>
+                    <image src="/images/xiche/location.png" class="img"
+                           data-longitude="{{item.longitude}}" data-latitude="{{item.latitude}}" data-name="{{item.name}}" data-address="{{item.address}}" bindtap="toMapTap" />
+                </view>
+            </view>
+        </view>
+        <view hidden="{{needLoadMore ? true : false}}" class="no-more-goods">没有更多啦</view>
+    </view>
+</view>

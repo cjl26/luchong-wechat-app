@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<!--1px = 750/320 = 2.34rpx;
+style="height:{{scrollHeight}}px;"
+-->
+<view class="container" style="min-height:{{scrollHeight}}px;" scroll-y="{{canvasHidden}}">
+    <view class="list" >
+        <view class="scroll-list" hidden="{{scrollViewData ? false : true}}">
+            <view class="a-scroll" wx:for-items="{{scrollViewData}}" wx:key="{{index}}"
+                  bindtap="toCardDetailTap" data-usercardid="{{item.userCardId}}" data-usercardnumber="{{item.userCardNumber}}"
+                  data-cardname="{{item.card_name}}" data-pictureurl="{{item.picture_url}}"
+                  data-detail="{{item.detail}}" data-cardid="{{item.card_id}}"
+                  data-fee="{{item.fee}}" data-effectiveday="{{item.effectiveDay}}"
+                  data-servicetime="{{item.userCardService[0].serviceTime}}" >
+                <view class="scroll-up">
+                    <view class="scroll-name">
+                        {{item.card_name}}
+                    </view>
+                    <view class="scroll-time">{{item.listDetail}}</view>
+                </view>
+                <view class="scroll-down" style="background-image:url({{item.picture_url}});background-size: cover;">
+                    <view class="scroll-down-enttime" wx:if="{{item.status=='2'}}">{{item.endTime}}</view>
+                    <image src="/images/xiche/cover_use.png" class="img" width="655rpx" height="341rpx"/>
+                </view>
+            </view>
+        </view>
+        <view hidden="{{needLoadMore ? true : false}}" class="no-more-goods">没有更多啦</view>
+    </view>
+    <view class="swiper-container">
+        <view class="swiper_box">
+            <block wx:for="{{banners}}" wx:key="id">
+                <swiper-item>
+                    <image bindtap="tapBanner" data-id="{{item.businessId}}" src="{{item.pictureUrl}}"
+                           class="slide-image" width="750rpx" height="282rpx" wx:if="{{pageType == 1}}"/>
+                </swiper-item>
+            </block>
+        </view>
+    </view>
+
+    <view hidden="{{canvasHidden}}" class="mask"  catchtouchmove='true' ></view>
+    <view class="canvas-box" hidden="{{canvasHidden}}" catchtouchmove='true'>
+        <view class="canvas-title">
+            <view class="canvas-title-text">核销二维码</view>
+            <image class="canvas-title-btn" src="/images/xiche/close.png" bindtap="hiddenCanvas"/>
+        </view>
+
+        <canvas class="canvas" hidden="{{canvasHidden}}"  canvas-id="mycanvas"/>
+    </view>
+
+</view>

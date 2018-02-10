@@ -1,0 +1,153 @@
+.container{
+    width: 100%;
+    background-color: #F2f2f2;
+}
+.status-box{
+    width:100%;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+.status-box .status-label{
+    width: 150rpx;
+    height: 100%;
+    text-align: center;
+    font-size:28rpx;
+    color:#353535;
+    box-sizing: border-box;
+    position: relative;
+}
+.status-box .status-label.active{
+    color:#e64340;
+    border-bottom: 6rpx solid #e64340;
+}
+.status-box .status-label .red-dot{
+    width: 16rpx;
+    height: 16rpx;
+    position: absolute;
+    left: 116rpx;
+    top:23rpx;
+    background-color: #f43530;
+    border-radius: 50%;
+}
+.no-order{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 88rpx;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 203rpx;
+    background-color: #F2f2f2;
+}
+.no-order-img{
+    width: 81rpx;
+    height: 96rpx;
+    margin-bottom: 31rpx;
+}
+.no-order .text{
+    font-size:28rpx;
+    color:#999999;
+    text-align: center
+}
+.scroll-list{
+    width: 100%;
+    margin-bottom: 50rpx;
+}
+.scroll-list .a-scroll{
+    /*width: 100%;*/
+    background-color: #fff;
+    margin-top: 20rpx;
+    padding-top: 5px;
+    /* padding: 20rpx;  */
+    display: flex;
+    flex-wrap: nowrap;
+    align-items:  center;
+}
+
+.scroll-list .a-scroll .order-left{
+    width: 150rpx;
+    padding-left: 19rpx;
+}
+
+
+.scroll-list .a-scroll .order-left .img{
+    width: 130rpx;
+    height:130rpx;
+}
+.scroll-list .a-scroll .order-mid {
+   width: 350rpx;
+   margin-top: 0rpx;
+}
+.scroll-list .a-scroll .order-mid .order-name{
+    text-indent:0rpx;
+    font-size: 35rpx;
+  font-weight:bold;
+    text-align: left;
+}
+
+.scroll-list .a-scroll .order-mid .order-detail{
+    text-indent:0rpx;
+    margin-top: 15rpx;
+    font-size: 25rpx;
+    text-align: left;
+}
+.scroll-list .a-scroll .order-right {
+    width: 250rpx;
+    padding-left: 10rpx;
+    padding: 15rpx;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end ;
+}
+.scroll-list .a-scroll .order-right .order-distance{
+  margin-top: 20rpx;
+  font-size: 32rpx;
+}
+.scroll-list .a-scroll .order-right .img{
+    width: 60rpx;
+    height:60rpx;
+}
+.no-more-goods{
+    margin-top: 20rpx;
+    text-align: center;
+    font-size: 24rpx;
+    padding-bottom:48rpx;
+    color: #999;
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 99;
+}
+.mask mask-img{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 99;
+}
+.mask mask-close{
+    width: 50rpx;
+    height: 50rpx;
+    margin: 20rpx;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 100;
+}
+
+
+

@@ -1,0 +1,83 @@
+<view class="container"  style="height:{{scrollHeight}}px;background-color: #F2f2f2;background-image:url({{backgroundUrl}});background-size:750rpx;background-repeat:no-repeat;background-color:{{backgroundColor}};" >
+    <view class="card-detail">
+        <view class="detail-home" wx:if="{{but_status == 3 || but_status == 5}}" bindtap="goHome">
+            首页
+        </view>
+        <view class="detail-fee" wx:if="{{feeText}}">
+            {{feeText}}
+
+        </view>
+        <!--<view class="detail-name" wx:if="{{card_name}}">-->
+            <!--{{card_name}}-->
+        <!--</view>-->
+        <image class="detail-pic" src="{{picture_url}}" wx:if="{{picture_url}}">
+        </image>
+        <view class="detail-text" wx:if="{{effectiveday}}">
+            <p class="detail-text-t1">{{servicename}}服务：<span style="color:#bd3027">{{servicetime}}次 \r\n \r\n \r\n  \r\n </span>
+                有限期为<span style="color:#bd3027">{{effectiveday}}</span>个月</p>
+        </view>
+        <view class="detail-text" wx:if="{{detail}}">
+            <text class="detail-text-t">({{detail}})</text>
+        </view>
+
+        <view class="detail-buttons">
+            <button size="mini" class="buttons-buy" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"   wx:if="{{but_status == 0}}" >
+                注册购买
+            </button>
+            <button size="mini" class="buttons-buy" bindtap="buyCard" wx:if="{{but_status == 1}}">
+                购买
+            </button>
+            <button size="mini" class="buttons-buy" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"   wx:if="{{but_status == 2 && phone == undefined}}" >
+                注册激活
+            </button>
+            <button size="mini" class="buttons-buy" bindtap="activateCard" wx:if="{{but_status == 2 && phone != undefined}}">
+                激活
+            </button>
+            <button size="mini" class="buttons-share" wx:if="{{but_status == 2}}"  open-type="share">
+                转赠
+            </button>
+            <button size="mini" class="buttons-buy" bindtap="collectCard" wx:if="{{but_status == 3}}">
+                领取
+            </button>
+            <button size="mini" class="buttons-buy" bindtap="useCard" wx:if="{{but_status == 4}}">
+                去使用
+            </button>
+            <button size="mini" class="buttons-buy" bindtap="collectShareCard" wx:if="{{but_status == 5}}">
+                领取转赠卡
+            </button>
+        </view>
+    </view>
+
+    <!--弹窗-->
+    <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+    <view class="modal-dialog" wx:if="{{showModal}}">
+        <view class="modal-title" >
+            提示
+        </view>
+        <view class="modal-text-view" wx:if="{{showModalText}}">
+            <text class="modal-text">
+                {{modalText}}
+            </text>
+
+        </view>
+        <view class="modal-input" wx:if="{{showModalInput}}">
+            <view class="modal-input-up">
+                {{phone}}
+            </view>
+            <view class="modal-input-down">
+                <input class="modal-input-down-left" type="number" maxlength="4" bindinput="bindKeyInput"> </input>
+                <button disabled="{{!smsBtnFlag}}" class="modal-input-down-right" bindtap="onModalSms">{{smsBtnText}}</button>
+            </view>
+        </view>
+        <view class="modal-btn" wx:if="{{showModalBtn}}">
+            <view class="modal-btn-left" bindtap="onCancel">
+                取消
+            </view>
+            <view class="modal-btn-right" bindtap="onConfirm" wx:if="{{showModalBtn}}">
+                确定
+            </view>
+        </view>
+    </view>
+    <!--弹窗-->
+
+</view>

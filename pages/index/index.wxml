@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<!--1px = 750/320 = 2.34rpx;-->
+<view class="container" style="min-height:{{scrollHeight}}px;">
+    <view scroll-y="true" class="list" >
+        <view class="swiper-container">
+            <swiper class="swiper_box" indicator-dots="{{indicatorDots}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  >
+                <block wx:for="{{banners}}" wx:key="id">
+                    <swiper-item>
+                        <image bindtap="tapBanner" data-id="{{item.businessId}}" src="{{item.pictureUrl}}"
+                               class="slide-image" width="750rpx" height="282rpx"/>
+                    </swiper-item>
+                </block>
+            </swiper>
+            <!--<view class="dots">-->
+                <!--<block wx:for="{{banners}}" wx:key="unique">-->
+                    <!--<view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>-->
+                <!--</block>-->
+            <!--</view>-->
+        </view>
+
+        <!--<view class="bar7" wx:if="{{banners}}">-->
+            <!--<view class="bar7_input">-->
+              <!--<input class="search_input" bindinput="bindKeyInput" placeholder="" maxlength="20"></input>-->
+            <!--</view>-->
+            <!--<image class="bar_img" src="/images/xiche/search.png" bindtap="search"></image>-->
+        <!--</view>-->
+        <view class='search-container'>
+            <input bindinput="bindKeyInput"></input>
+            <image class="img-search-input" src='/images/transaction-list/search_input.png'></image>
+            <image class="img-search-button" src='/images/transaction-list/search_button.png' bindtap="search"></image>
+
+        </view>
+
+        <view class="scroll-list" hidden="{{scrollViewData ? false : true}}">
+            <view class="a-scroll" wx:for-items="{{scrollViewData}}" wx:key="{{index}}"
+                  bindtap="toCardDetailTap" data-cardname="{{item.card_name}}" data-pictureurl="{{item.picture_url}}" data-detail="{{item.detail}}"
+                  data-cardid="{{item.card_id}}" data-fee="{{item.fee}}" data-effectiveday="{{item.effectiveDay}}"
+                  data-servicename="{{item.services[0].service_name}}"  data-servicetime="{{item.services[0].service_time}}"  >
+                <view class="scroll-up">
+                    <view class="scroll-name">
+                        {{item.card_name}}
+                    </view>
+                    <!--<view class="scroll-time">10次</view>-->
+                </view>
+                <view class="scroll-down" style="background-image:url({{item.picture_url}});background-size: cover;">
+                    <image src="/images/xiche/cover_buy.png" class="img" width="655rpx" height="341rpx"/>
+                </view>
+            </view>
+
+        </view>
+
+        <view hidden="{{needLoadMore ? true : false}}" class="no-more-goods">没有更多啦</view>
+    </view>
+    <!--</scroll-view>-->
+
+
+</view>

@@ -1,0 +1,154 @@
+<view style="width:750rpx;height:{{scrollHeight}}px;background-color: #F2f2f2">
+    <view class="userinfo">
+        <image  class="userinfo-avatar" src="{{ userInfo.avatarUrl }}"
+               background-size="cover"></image>
+        <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+        <view class="userinfo-edit">
+            <view class="userinfo-phone" >
+                <view class="userinfo-phone-text"  wx:if="{{phone}}"  >{{phone}}</view>
+                <button class="userinfo-phone-btn"  wx:if="{{!phone}}"  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">点击绑定手机</button>
+                <!--<image class="userinfo-phone-img" src="/images/xiche/edit.png" wx:if="{{!phone}}"></image>-->
+            </view>
+
+            <view class="userinfo-car"  wx:if="{{carLicence}}" bindtap="toEditCarLicenseTap">
+                <view class="userinfo-car-text" >
+                    {{carLicence}}
+                </view>
+                <image class="userinfo-car-img" src="/images/xiche/edit.png" ></image>
+            </view>
+            <view class="userinfo-car" wx:if="{{!carLicence}}" ><view class="userinfo-car-text" bindtap="toEditCarLicenseTap">
+                绑定车牌
+            </view>
+                <image class="userinfo-car-img" src="/images/xiche/edit.png" ></image>
+            </view>
+
+        </view>
+    </view>
+    <view class="person-item">
+        <view class="item-title">
+            <view class="title-color"></view>
+            <view class="title-text">
+                持卡记录
+            </view>
+        </view>
+        <view class="item-content">
+            <view class="item-content-tab" bindtap="toBuyCardRecordTap" data-pagetype="2">
+                <image class="item-content-tab-icon" src="/images/xiche/person-item1.png">
+                </image>
+                <view class="item-content-tab-text">
+                    购卡记录
+                </view>
+            </view>
+            <view class="item-content-tab" bindtap="toUserCardRecordTap" >
+                <image class="item-content-tab-icon" src="/images/xiche/person-item2.png">
+                </image>
+                <view class="item-content-tab-text">
+                    自用记录
+                </view>
+            </view>
+            <view class="item-content-tab" bindtap="toShareCardRecordTap">
+                <image class="item-content-tab-icon" src="/images/xiche/person-item3.png">
+                </image>
+                <view class="item-content-tab-text">
+                    转赠记录
+                </view>
+            </view>
+            <view class="item-content-tab" bindtap="toReceivedCardRecordTap">
+                <image class="item-content-tab-icon" src="/images/xiche/person-item4.png">
+                </image>
+                <view class="item-content-tab-text">
+                    友赠记录
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="person-item">
+        <view class="item-title">
+            <view class="title-color"></view>
+            <view class="title-text">
+                其它
+            </view>
+        </view>
+        <view class="item-content">
+            <view class="item-content-tab" bindtap="toTransactionListTap">
+                <image class="item-content-tab-icon" src="/images/xiche/person-item5.png">
+                </image>
+                <view class="item-content-tab-text">
+                    核销记录
+                </view>
+            </view>
+            <view class="item-content-tab">
+                <image class="item-content-tab-icon" src="/images/xiche/person-item6.png">
+                </image>
+                <view class="item-content-tab-text">
+                    版本:{{js_version}}
+                </view>
+            </view>
+            <view class="item-content-tab" bindtap="toCustomerTap">
+                <image class="item-content-tab-icon" src="/images/xiche/person-item8.png">
+                </image>
+                <view class="item-content-tab-text">
+                    联系客服
+                </view>
+            </view>
+            <view class="item-content-tab" style="visibility:hidden">
+                <image class="item-content-tab-icon" src="/images/xiche/person-item4.png">
+                </image>
+                <view class="item-content-tab-text">
+                    暂不显示
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+
+
+    <!--弹窗-->
+    <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+    <view class="modal-dialog" wx:if="{{showModal}}">
+        <view class="modal-title" >
+            提示
+        </view>
+        <view class="modal-text-view" wx:if="{{showModalText}}">
+            <text class="modal-text">
+                {{modalText}}
+            </text>
+
+        </view>
+        <view class="modal-input" wx:if="{{showModalInput}}">
+            <!--<view class="modal-input-up">-->
+                <!--{{phone}}-->
+            <!--</view>-->
+            <view class="modal-input-down">
+                <input value="{{carLicence}}" class="modal-input-down-left" type="text" maxlength="7" bindinput="bindKeyInput" placeholder="请输入车牌"> </input>
+                <!--<button disabled="{{!smsBtnFlag}}" class="modal-input-down-right" bindtap="onModalSms">{{smsBtnText}}</button>-->
+            </view>
+        </view>
+        <view class="modal-btn" >
+            <view class="modal-btn-left" bindtap="onCancel" wx:if="{{showModalBtn}}">
+                取消
+            </view>
+            <view class="modal-btn-right" bindtap="onConfirm" wx:if="{{showModalBtn}}">
+                确定
+            </view>
+        </view>
+    </view>
+    <!--弹窗-->
+
+    <view hidden="{{canvasHidden}}" class="mask" catchtouchmove='true'></view>
+    <view class="canvas-box" hidden="{{canvasHidden}}" catchtouchmove='true'>
+        <view class="canvas-title">
+            <view class="canvas-title-text">联系客服</view>
+            <image class="canvas-title-btn" src="/images/xiche/close.png" bindtap="hiddenCanvas"/>
+        </view>
+        <view class="canvas-phone" bindtap="customerCall">
+
+        </view>
+        <!--<canvas class="canvas" hidden="{{canvasHidden}}"  canvas-id="mycanvas"/>-->
+        <image src="http://hicatcitycardimage.6so2o.com/wxappimage/customer_service.jpg" class="canvas" hidden="{{canvasHidden}}" canvas-id="mycanvas"
+               data-src="http://hicatcitycardimage.6so2o.com/wxappimage/customer_service.jpg" bindtap="previewImage" />
+
+    </view>
+</view>
+

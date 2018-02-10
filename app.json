@@ -1,0 +1,58 @@
+{
+  "networkTimeout": {
+    "request": 15000,
+    "downloadFile": 10000
+  },
+  "pages":[
+    "pages/index/index",
+    "pages/card-detail/index",
+    "pages/card-list/index",
+    "pages/person-card-list/index",
+    "pages/merchant-list/index",
+    "pages/merchant-detail/index",
+    "pages/person-center/index",
+    "pages/transaction-list/transaction-list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#bd3027",
+    "navigationBarTitleText":"喜卡"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#e64340",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "box-shadow": "0 0 6px 0",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/xiche/tab1-off.png",
+        "selectedIconPath": "images/xiche/tab1-on.png",
+        "text": "购卡"
+      },
+      {
+        "pagePath": "pages/card-list/index",
+        "iconPath": "images/xiche/tab2-off.png",
+        "selectedIconPath": "images/xiche/tab2-on.png",
+        "text": "核销"
+      },
+      {
+        "pagePath": "pages/merchant-list/index",
+        "iconPath": "images/xiche/tab3-off.png",
+        "selectedIconPath": "images/xiche/tab3-on.png",
+        "text": "附近"
+      },
+      {
+        "pagePath": "pages/person-center/index",
+        "iconPath": "images/xiche/tab4-off.png",
+        "selectedIconPath": "images/xiche/tab4-on.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request" : 60000      
+   
+  }
+}

@@ -1,0 +1,348 @@
+/*.container{*/
+/*}*/
+.userinfo {
+    margin-top: -50rpx;
+    display: flex;
+    flex-direction: column;
+    padding: 50rpx 0;
+    align-items: center;
+    background-image: url("http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png");
+    background-size: cover;
+    width: 750rpx;
+    height: 364rpx;
+}
+
+.userinfo-avatar {
+    width: 160rpx;
+    height: 160rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    margin-top: -10rpx;
+    color: #FFF;
+}
+
+.userinfo-edit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.userinfo-phone{
+    width: 375rpx;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.userinfo-phone-btn{
+    /*width: auto;*/
+    /*width: 200rpx;*/
+    background: rgba(255,255,255,0);
+    color: white;
+    font-size: 35rpx;
+    height:50rpx;
+    line-height: 50rpx;
+}
+.userinfo-phone-btn::after{
+    border: white;
+    border-image-width:5rpx;
+    padding: 0rpx;
+    margin: 0rpx;
+    text-align: right;
+}
+
+.userinfo-phone-text{
+    /*width: auto;*/
+    width: 280rpx;
+    background: rgba(255,255,255,0);
+    /*text-align: center;*/
+    color: white;
+    font-size: 35rpx;
+    height:50rpx;
+    line-height: 50rpx;
+}
+.userinfo-phone-img{
+    height:50rpx;
+    width: 50rpx;
+}
+ .userinfo-car{
+     width: 375rpx;
+    background: rgba(255,255,255,0);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.userinfo-car-text{
+    height:50rpx;
+    font-size: 35rpx;
+    line-height: 50rpx;
+}
+
+.userinfo-car-img{
+    height:50rpx;
+    width: 50rpx;
+}
+
+
+.person-item {
+    width: 700rpx;
+    height: 220rpx;
+    background-color: white;
+    margin-left: 25rpx;
+    padding-top: 15rpx;
+    margin-top: 50rpx;
+
+}
+
+.person-item .item-title {
+    margin-top: 20rpx;
+    height: 50rpx;
+    display: flex;
+}
+
+.person-item .item-title .title-color {
+    flex-grow: 1;
+    background-color: #bd3027;
+    height: 100%;
+}
+
+.person-item .item-title .title-text {
+    flex-grow: 30;
+    height: 100%;
+    font-size: 35rpx;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 15rpx;
+}
+
+.person-item .item-content {
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: space-around;
+}
+
+.person-item .item-content .item-content-tab {
+    /*width: 160 rpx;*/
+    /*height: 160 rpx;*/
+    text-align: center;
+}
+
+.person-item .item-content .item-content-tab .item-content-tab-icon {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.person-item .item-content .item-content-tab .item-content-tab-text {
+    font-size: 28rpx;
+    font-weight: 500;
+}
+
+/*弹窗css开始*/
+.modal-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 9000;
+    color: #fff;
+}
+
+.modal-dialog {
+    width: 650rpx;
+    height:480rpx;
+    overflow: hidden;
+    position: fixed;
+    margin-left: 50rpx;
+    margin-right: 50rpx;
+    top: 25%;
+    left: 0;
+    z-index: 9999;
+    background: #ffffff;
+    border-radius: 36rpx;
+}
+.modal-title{
+    line-height: 80rpx;
+    text-align: center;
+    background-color: #bd3027;
+    height: 80rpx;
+    color: white;
+    width: auto;
+}
+
+.modal-text-view {
+    height: 320rpx;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-text {
+    width:550rpx;
+    line-height:40rpx;
+    font-size:35rpx;
+    margin-top:-40rpx;
+    margin-left:20px;
+}
+
+.modal-input {
+    text-align: center;
+    height:320rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*.modal-input-up {*/
+    /*line-height:70rpx;*/
+    /*width: auto;*/
+    /*height: 70rpx;*/
+    /*margin: 50rpx;*/
+    /*padding-left: 30rpx;*/
+    /*background-color: #eeeeee;*/
+    /*border-radius: 50rpx;*/
+/*}*/
+
+.modal-input-down {
+    /*width: auto;*/
+    height: 70rpx;
+    margin: 50rpx;
+    padding-left: 30rpx;
+    background-color: #eeeeee;
+    border-radius: 50rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.modal-input-down-left {
+    height: 70rpx;
+    line-height:70rpx;
+    font-size: 26rpx;
+    flex:5;
+    text-align: left;
+    padding-left: 20rpx;
+}
+.modal-input-down-right {
+    line-height:70rpx;
+    flex:3;
+    background-color: #bd3027;
+    text-overflow:clip;
+    font-size: 26rpx;
+    text-align: center;
+    color: white;
+    border-radius: 0rpx 50rpx 50rpx 0rpx ;
+}
+.modal-btn{
+    border-top:1px solid #bd3027;
+    height: 80rpx;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.modal-btn .modal-btn-left{
+    line-height: 80rpx;
+    width: 375rpx;
+    background-color: white;
+    color: #bd3027;
+    text-align: center;
+}
+.modal-btn  .modal-btn-right{
+    line-height: 80rpx;
+    width: 375rpx;
+    background-color: #bd3027;
+    color: white;
+    text-align: center;
+}
+/*弹窗css结束*/
+
+
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 99;
+    color: #fff;
+}
+
+.canvas-box{
+    width: 750rpx;
+    height: 880rpx;
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-image: url("http://hicatcitycardimage.6so2o.com/wxappimage/customer_service_bg.jpg");
+
+}
+
+.canvas-title{
+    width: 750rpx;
+    height: 50rpx;
+    /*margin-top: 20rpx;*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+
+}
+.canvas-title-text{
+    margin-top: 20rpx;
+    position:absolute;
+    left: 0rpx;
+    top:0rpx;
+    width: 750rpx;
+    height: 50rpx;
+    color: white;
+    font-size: 50rpx;
+    text-align: center;
+    /*margin-left: 255rpx;*/
+}
+
+.canvas-title-btn{
+    position:absolute;
+    right: 20rpx;
+    top:0rpx;
+    width: 50rpx;
+    height: 50rpx;
+    margin: 20rpx;
+}
+.canvas-phone{
+    position:absolute;
+    left:0;
+    top:80rpx;
+    width:750rpx;
+    height:200rpx;
+
+}
+
+.canvas{
+    /*z-index: 100;*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    position: absolute;
+    margin:auto;
+    top: 80rpx;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 350rpx;
+    height: 350rpx;
+    background:#f1f1f1;
+}

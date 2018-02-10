@@ -1,0 +1,243 @@
+.container{
+    /*background-image: url("http://hicatcitycardimage.6so2o.com/wxappimage/detail_bg.jpg");*/
+
+}
+.card-detail {
+    padding-top: 30rpx;
+    width: 750rpx;
+
+    /*background-color: #f6e7d4;*/
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: flex-start;
+    align-items:center; */
+}
+
+.card-detail .detail-home{
+    width: 720rpx;
+    margin-left: 30rpx;
+    background-image: url("http://hicatcitycardimage.6so2o.com/wxappimage/back.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size:contain;
+    line-height: 60rpx;
+    padding-left: 60rpx;
+    color: #bd3027;
+    font-weight: 900;
+    font-size: 38rpx;
+    width: 750rpx;
+    height: 60rpx;
+
+}
+
+.card-detail .detail-fee{
+    margin-top: 210rpx;
+    text-align: center;
+    height: 50rpx;
+    flex-grow: 1;
+    font-size: 50rpx;
+    color: #bd3027;
+    font-weight: 700;
+}
+.card-detail .detail-name{
+    flex-grow: 1;
+    font-size: 70rpx;
+    color: #570100;
+    font-weight: 700;
+}
+
+.card-detail .detail-pic{
+    flex-grow: 1;
+    text-align: center;
+    width: 650rpx;
+    height: 315rpx;
+    margin-top: 350rpx;
+    margin-left: 50rpx;
+    margin-right: 50rpx;
+    border-radius:20rpx;
+ }
+
+.card-detail .detail-text{
+    width: 600rpx;
+    margin-left: 75rpx;
+  margin-top: 20rpx;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 30rpx;
+    color: #3e2b25;
+    font-weight: 700;
+     white-space:normal;
+    word-break:break-all; 
+}
+.detail-text-t1 {
+    height: 600rpx;
+    text-align: center;
+    font-size: 30rpx;
+}
+
+.detail-text-t {
+    height: 600rpx;
+    text-align: center;
+    font-size: 28rpx;
+}
+
+.card-detail .detail-buttons{
+    width: 750rpx;
+    margin:0 auto;
+    position: fixed;
+    text-align: center;
+    bottom: 100rpx;
+}
+.card-detail .buttons-buy , .buttons-activate{
+
+    background-color: #bd3027;
+    border-radius: 200rpx;
+    color: white;
+    padding-left: 100rpx;
+    padding-right: 100rpx;
+
+}
+
+/*.card-detail {*/
+    /*margin-left: 20rpx;*/
+    /*margin-right: 20rpx;*/
+    /*background-color: #bd3027;*/
+    /*border-radius: 50rpx;*/
+    /*color: white;*/
+    /*padding-left: 100rpx;*/
+    /*padding-right: 100rpx;*/
+/*}*/
+.card-detail .buttons-share{
+    background-color: white;
+    border-radius: 200rpx;
+    color: #bd3027;
+    padding-left: 100rpx;
+    padding-right: 100rpx;
+    margin-left:20rpx;
+}
+.card-detail .buttons-buy ,  .buttons-share::after {
+    font-size: 33rpx;
+}
+
+.card-detail .buttons-share , .buttons-share::after {
+    font-size: 33rpx;
+}
+
+/*弹窗css开始*/
+.modal-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 9000;
+    color: #fff;
+}
+
+.modal-dialog {
+    width: 650rpx;
+    height:480rpx;
+    overflow: hidden;
+    position: fixed;
+    margin-left: 50rpx;
+    margin-right: 50rpx;
+    top: 25%;
+    left: 0;
+    z-index: 9999;
+    background: #ffffff;
+    border-radius: 36rpx;
+}
+.modal-title{
+    line-height: 80rpx;
+    text-align: center;
+    background-color: #bd3027;
+    height: 80rpx;
+    color: white;
+    width: auto;
+}
+
+.modal-text-view {
+    height: 320rpx;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-text {
+    width:550rpx;
+    line-height:40rpx;
+    font-size:35rpx;
+    margin-top:-40rpx;
+    margin-left:20px;
+}
+
+.modal-input {
+    text-align: center;
+    padding: 50rpx 30rpx;
+    height: 400rpx;
+}
+
+.modal-input-up {
+    line-height:70rpx;
+    width: auto;
+    height: 70rpx;
+    margin: 50rpx;
+    padding-left: 30rpx;
+    background-color: #eeeeee;
+    border-radius: 50rpx;
+}
+
+.modal-input-down {
+    /*width: auto;*/
+    height: 70rpx;
+    margin: 50rpx;
+    padding-left: 30rpx;
+    background-color: #eeeeee;
+    border-radius: 50rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.modal-input-down-left {
+    height: 70rpx;
+    line-height:70rpx;
+    font-size: 26rpx;
+    flex:5;
+}
+.modal-input-down-right {
+    line-height:70rpx;
+    flex:3;
+    background-color: #bd3027;
+    text-overflow:clip;
+    font-size: 26rpx;
+    text-align: center;
+    color: white;
+    border-radius: 0rpx 50rpx 50rpx 0rpx ;
+}
+.modal-btn{
+    border-top:1px solid #bd3027;
+    height: 80rpx;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.modal-btn .modal-btn-left{
+    line-height: 80rpx;
+    width: 375rpx;
+    background-color: white;
+    color: #bd3027;
+    text-align: center;
+}
+.modal-btn  .modal-btn-right{
+    line-height: 80rpx;
+    width: 375rpx;
+    background-color: #bd3027;
+    color: white;
+    text-align: center;
+}
+/*弹窗css结束*/

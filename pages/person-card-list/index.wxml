@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<!--1px = 750/320 = 2.34rpx;
+style="height:{{scrollHeight}}px;"
+-->
+<view class="container" style="min-height:{{scrollHeight}}px;">
+    <view scroll-y="true" class="list" >
+        <view class="scroll-list" hidden="{{scrollViewData ? false : true}}">
+            <view class="a-scroll" wx:for-items="{{scrollViewData}}" wx:key="{{index}}"
+                  bindtap="toCardDetailTap"
+                  data-usercardid="{{item.userCardId}}" data-usercardnumber="{{item.userCardNumber}}"
+                  data-cardname="{{item.card_name}}" data-pictureurl="{{item.picture_url}}"
+                  data-detail="{{item.detail}}" data-cardid="{{item.card_id}}"
+                  data-fee="{{item.fee}}" data-cardstatus="{{item.status}}"
+                  data-effectiveday="{{item.effectiveDay}}"
+                  data-servicename="{{item.cardServices[0].service_name}}"  data-servicetime="{{item.cardServices[0].service_time}}">
+                <view class="scroll-line" wx:if="{{item.is_expired == '1' && reqStatus == 2}}">
+                    <view class="scroll-line-left">
+
+                    </view>
+                    <view class="scroll-line-center">
+                        失效
+                    </view>
+                    <view class="scroll-line-right">
+
+                    </view>
+                </view>
+
+                <text class="scroll-createtime" wx:if="{{item.createTime}}">{{item.createTime}}</text>
+                <view class="scroll-up" >
+                    <view class="scroll-name">
+                        {{item.card_name}}
+                    </view>
+                    <view class="scroll-time">{{item.listDetail}}</view>
+                </view>
+                <view class="scroll-down" style="background-image:url({{item.picture_url}});background-size: cover;">
+                    <view class="scroll-down-enttime" wx:if="{{item.status=='2'}}">{{item.endTime}}</view>
+                    <image src="/images/xiche/cover_use.png" class="img" width="655rpx" height="341rpx" wx:if="{{pageType == 1}}"/>
+                </view>
+            </view>
+        </view>
+        <view hidden="{{needLoadMore ? true : false}}" class="no-more-goods">没有更多啦</view>
+    </view>
+    <view hidden="{{canvasHidden}}" class="mask"></view>
+    <view class="canvas-box" hidden="{{canvasHidden}}">
+        <view class="canvas-title">
+            <view class="canvas-title-text">核销二维码</view>
+            <image class="canvas-title-btn" src="/images/xiche/close.png" bindtap="hiddenCanvas"/>
+        </view>
+
+            <canvas class="canvas" hidden="{{canvasHidden}}"  canvas-id="mycanvas"/>
+        </view>
+
+</view>
