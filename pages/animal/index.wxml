@@ -1,0 +1,53 @@
+<!--
+1. 头像 - 宠物数，被关注／关注数量，获取被点赞，获取被打赏的数量
+2. 具体列表
+-->
+
+<view class="userinfo">
+    <image  class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+</view>
+
+
+<scroll-view scroll-x="true" class="scroll-view-x">
+  <view class="scroll-view-item">
+  	<view class="{{currentTab==0 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="0">自己家</view>
+  </view>
+  <view class="scroll-view-item">
+  	<view class="{{currentTab==1 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="1">老王家</view>
+  </view>
+  <view class="scroll-view-item">
+  	<view class="{{currentTab==2 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="2">赞过</view>
+  </view>
+  <view class="scroll-view-item">
+  	<view class="{{currentTab==3 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="3">赏过</view>
+  </view>
+</scroll-view>
+
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange" style="height: {{windowHeight-36}}px;">
+	<swiper-item>
+		<scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}" lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
+			<template is="groupList" data="{{groupList:groupList,loading:loading}}"/>
+		</scroll-view>
+	</swiper-item>
+
+	<swiper-item>
+		<scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}" lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
+			<template is="groupList" data="{{groupList:groupList,loading:loading}}"/>
+		</scroll-view>
+	</swiper-item>
+
+	<swiper-item>
+		<scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}" lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
+			<template is="groupList" data="{{groupList:groupList,loading:loading}}"/>
+		</scroll-view>
+	</swiper-item>
+
+	<swiper-item>
+		<scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}" lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
+			<template is="groupList" data="{{groupList:groupList,loading:loading}}"/>
+		</scroll-view>
+	</swiper-item>
+
+</swiper>

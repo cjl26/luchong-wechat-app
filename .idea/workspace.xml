@@ -2,41 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dac63c2-f3f1-4718-9a54-c8052d0c65b4" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/pages/animal/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pages/animal/index.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pages/animal/index.wxml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pages/animal/index.wxss" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app.json" afterPath="$PROJECT_DIR$/app.json" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/card-car-icon.png" afterPath="$PROJECT_DIR$/images/luchong/card-car-icon.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/card-car-pic.png" afterPath="$PROJECT_DIR$/images/luchong/card-car-pic.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/card-icon-buy.png" afterPath="$PROJECT_DIR$/images/luchong/card-icon-buy.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/card-icon-normal.png" afterPath="$PROJECT_DIR$/images/luchong/card-icon-normal.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/card-icon-use.png" afterPath="$PROJECT_DIR$/images/luchong/card-icon-use.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/close.png" afterPath="$PROJECT_DIR$/images/luchong/close.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/cover_buy.png" afterPath="$PROJECT_DIR$/images/luchong/cover_buy.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/cover_use.png" afterPath="$PROJECT_DIR$/images/luchong/cover_use.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/customer_service.jpg" afterPath="$PROJECT_DIR$/images/luchong/customer_service.jpg" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/detail_bg.jpg" afterPath="$PROJECT_DIR$/images/luchong/detail_bg.jpg" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/down-arrow.png" afterPath="$PROJECT_DIR$/images/luchong/down-arrow.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/edit.png" afterPath="$PROJECT_DIR$/images/luchong/edit.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/location.png" afterPath="$PROJECT_DIR$/images/luchong/location.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/no-order.png" afterPath="$PROJECT_DIR$/images/luchong/no-order.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/person-bg.png" afterPath="$PROJECT_DIR$/images/luchong/person-bg.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/person-item1.png" afterPath="$PROJECT_DIR$/images/luchong/person-item1.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/person-item2.png" afterPath="$PROJECT_DIR$/images/luchong/person-item2.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/person-item3.png" afterPath="$PROJECT_DIR$/images/luchong/person-item3.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/person-item4.png" afterPath="$PROJECT_DIR$/images/luchong/person-item4.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/person-item5.png" afterPath="$PROJECT_DIR$/images/luchong/person-item5.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/person-item6.png" afterPath="$PROJECT_DIR$/images/luchong/person-item6.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/person-item7.png" afterPath="$PROJECT_DIR$/images/luchong/person-item7.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/person-item8.png" afterPath="$PROJECT_DIR$/images/luchong/person-item8.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/qrcode-bg.png" afterPath="$PROJECT_DIR$/images/luchong/qrcode-bg.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/search.png" afterPath="$PROJECT_DIR$/images/luchong/search.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/tab1-off.png" afterPath="$PROJECT_DIR$/images/luchong/tab1-off.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/tab1-on.png" afterPath="$PROJECT_DIR$/images/luchong/tab1-on.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/tab2-off.png" afterPath="$PROJECT_DIR$/images/luchong/tab2-off.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/tab2-on.png" afterPath="$PROJECT_DIR$/images/luchong/tab2-on.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/tab3-off.png" afterPath="$PROJECT_DIR$/images/luchong/tab3-off.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/tab3-on.png" afterPath="$PROJECT_DIR$/images/luchong/tab3-on.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/tab4-off.png" afterPath="$PROJECT_DIR$/images/luchong/tab4-off.png" />
-      <change beforePath="$PROJECT_DIR$/images/xiche/tab4-on.png" afterPath="$PROJECT_DIR$/images/luchong/tab4-on.png" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" afterPath="$PROJECT_DIR$/project.config.json" />
+      <change beforePath="$PROJECT_DIR$/app.wxss" afterPath="$PROJECT_DIR$/app.wxss" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" afterPath="$PROJECT_DIR$/pages/index/index.wxml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,18 +26,48 @@
       <file leaf-file-name="app.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            <state relative-caret-position="195">
+              <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.wxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+        <entry file="file://$PROJECT_DIR$/pages/animal/index.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-387">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/person-center/index.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="25" column="11" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="25" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/animal/index.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -72,13 +75,26 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>xiche</find>
+      <find>images/xiche/cover_buy.png</find>
+      <find>on</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/app.json" />
+        <option value="$PROJECT_DIR$/pages/animal/index.wxss" />
+        <option value="$PROJECT_DIR$/pages/animal/index.json" />
+        <option value="$PROJECT_DIR$/pages/animal/index.js" />
+        <option value="$PROJECT_DIR$/app.wxss" />
+        <option value="$PROJECT_DIR$/pages/animal/index.wxml" />
       </list>
     </option>
   </component>
@@ -89,10 +105,26 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="86" />
+    <option name="x" value="20" />
     <option name="y" value="23" />
     <option name="width" value="1260" />
-    <option name="height" value="704" />
+    <option name="height" value="668" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -131,7 +163,13 @@
               <item name="luchong-wechat-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="luchong-wechat-app" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="animal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="luchong-wechat-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="luchong-wechat-app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="person-center" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -143,7 +181,12 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Markdown" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/animal" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -170,15 +213,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518275206413</updated>
-      <workItem from="1518275209564" duration="1812000" />
+      <workItem from="1518275209564" duration="7368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1812000" />
+    <option name="totallyTimeSpent" value="7368000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="86" y="23" width="1260" height="704" extended-state="0" />
+    <frame x="20" y="23" width="1260" height="668" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -224,7 +267,7 @@
         <state relative-caret-position="165">
           <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -245,18 +288,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.json">
+    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        <state relative-caret-position="269">
+          <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+    <entry file="file://$PROJECT_DIR$/images/luchong/card-car-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/luchong/card-car-pic.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/luchong/tab1-off.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/luchong/tab1-on.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/animal/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-387">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="246">
+          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/animal/index.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/animal/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/person-center/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="25" column="11" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="25" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/animal/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>

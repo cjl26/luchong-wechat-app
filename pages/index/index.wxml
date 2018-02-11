@@ -44,7 +44,7 @@
                     <!--<view class="scroll-time">10次</view>-->
                 </view>
                 <view class="scroll-down" style="background-image:url({{item.picture_url}});background-size: cover;">
-                    <image src="/images/xiche/cover_buy.png" class="img" width="655rpx" height="341rpx"/>
+                    <image src="/images/luchong/cover_buy.png" class="img" width="655rpx" height="341rpx"/>
                 </view>
             </view>
 

@@ -3,7 +3,7 @@
     "request": 15000,
     "downloadFile": 10000
   },
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/card-detail/index",
     "pages/card-list/index",
@@ -11,15 +11,16 @@
     "pages/merchant-list/index",
     "pages/merchant-detail/index",
     "pages/person-center/index",
-    "pages/transaction-list/transaction-list"
+    "pages/transaction-list/transaction-list",
+    "pages/animal/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#bd3027",
-    "navigationBarTitleText":"撸宠"
+    "navigationBarBackgroundColor": "#EFA2B5",
+    "navigationBarTitleText": "撸宠"
   },
   "tabBar": {
-    "color": "#6e6d6b",
+    "color": "#EFA2B5",
     "selectedColor": "#e64340",
     "borderStyle": "white",
     "backgroundColor": "#fff",
@@ -32,7 +33,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/card-list/index",
+        "pagePath": "pages/animal/index",
         "iconPath": "images/luchong/tab2-off.png",
         "selectedIconPath": "images/luchong/tab2-on.png",
         "text": "萌宠"
@@ -46,7 +47,6 @@
     ]
   },
   "networkTimeout": {
-    "request" : 60000      
-   
+    "request": 60000
   }
 }
