@@ -7,6 +7,8 @@
 <!--1px = 750/320 = 2.34rpx;-->
 <view class="container" style="min-height:{{scrollHeight}}px;">
     <view scroll-y="true" class="list" >
+
+        <!--广告-->
         <view class="swiper-container">
             <swiper class="swiper_box" indicator-dots="{{indicatorDots}}"
                     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  >
@@ -23,6 +25,38 @@
                 <!--</block>-->
             <!--</view>-->
         </view>
+
+        <!--QA-->
+        <!--
+        <view class="puzzle-li box-sizing" bindtap="tapQA">
+            <view class="puzzle-logo plr20">
+                <text>问答</text>
+            </view>
+            <text class="puzzle-title plr20">QA标题</text>
+            <text class="puzzle-name plr20">QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情</text>
+            <view class="puzzle-img plr20"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+        </view>
+        -->
+
+        <view class="scroll-list">
+            <view class="some-room mt30">
+                <view class="puzzle-logo plr20">
+                    <text>问答</text>
+                </view>
+                <view class="sroom-l box-sizing fl plr20">
+                    <text class="puzzle-title">QA标题</text>
+                    <text class="puzzle-name">QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情</text>
+                </view>
+                <view class="sroom-r fr">
+                    <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg"></image>
+                </view>
+            </view>
+        </view>
+
+        <!--猫-->
+
+        <!--狗-->
+
 
         <!--<view class="bar7" wx:if="{{banners}}">-->
             <!--<view class="bar7_input">-->

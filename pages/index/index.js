@@ -163,6 +163,7 @@ Page({
         this.loadMore()
     },
 
+    //获取广告
     apiBannerQuery: function () {
         console.log("apiBannerQuery exitFlag:" + app.globalData.exitFlag)
 
@@ -189,6 +190,13 @@ Page({
             }
         }).send()
     },
+
+    //获取问答信息
+    apiQaQuery : function () {
+
+
+    },
+
     onReady: function (e) {
 
     },
