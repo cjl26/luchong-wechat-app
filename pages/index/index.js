@@ -19,50 +19,50 @@ Page({
 
     //事件处理函数
 
-    toCardDetailTap: function (e) {//点击跳转
-
-        if (app.globalData.exitFlag) {//如果flag为true，提示授权
-            wx.showModal({
-                title: '提示',
-                content: '获取授权失败',
-                confirmText: '点击退出',
-                cancelText: '重新设置',
-                success: function (res) {
-                    if (res.confirm) {
-                        wx.navigateBack({
-                            delta: 1
-                        })
-                    } else if (res.cancel) {
-                        wx.openSetting({
-                            complete: (res) => {
-                                wx.reLaunch({
-                                    url: '/pages/index/index',
-                                })
-                            }
-                        })
-                    }
-                }
-            })
-            return
-        } else {
-            console.log('flag:正常')
-        }
-
-        app.globalData.pageType = app.globalData.pageType0ProduceList
-        var url = "/pages/card-detail/index?detailName=" + e.currentTarget.dataset.cardname
-            + "&detailPic=" + e.currentTarget.dataset.pictureurl
-            + "&detailText=" + e.currentTarget.dataset.detail
-            + "&detailCardId=" + e.currentTarget.dataset.cardid
-            + "&detailFee=" + e.currentTarget.dataset.fee
-            + "&effectiveday=" + e.currentTarget.dataset.effectiveday
-            + "&servicename=" + e.currentTarget.dataset.servicename
-            + "&servicetime=" + e.currentTarget.dataset.servicetime
-            + "&detailBtnStatus=1"
-        console.log(url)
-        wx.navigateTo({
-            url: url
-        })
-    },
+    // toCardDetailTap: function (e) {//点击跳转
+    //
+    //     if (app.globalData.exitFlag) {//如果flag为true，提示授权
+    //         wx.showModal({
+    //             title: '提示',
+    //             content: '获取授权失败',
+    //             confirmText: '点击退出',
+    //             cancelText: '重新设置',
+    //             success: function (res) {
+    //                 if (res.confirm) {
+    //                     wx.navigateBack({
+    //                         delta: 1
+    //                     })
+    //                 } else if (res.cancel) {
+    //                     wx.openSetting({
+    //                         complete: (res) => {
+    //                             wx.reLaunch({
+    //                                 url: '/pages/index/index',
+    //                             })
+    //                         }
+    //                     })
+    //                 }
+    //             }
+    //         })
+    //         return
+    //     } else {
+    //         console.log('flag:正常')
+    //     }
+    //
+    //     app.globalData.pageType = app.globalData.pageType0ProduceList
+    //     var url = "/pages/card-detail/index?detailName=" + e.currentTarget.dataset.cardname
+    //         + "&detailPic=" + e.currentTarget.dataset.pictureurl
+    //         + "&detailText=" + e.currentTarget.dataset.detail
+    //         + "&detailCardId=" + e.currentTarget.dataset.cardid
+    //         + "&detailFee=" + e.currentTarget.dataset.fee
+    //         + "&effectiveday=" + e.currentTarget.dataset.effectiveday
+    //         + "&servicename=" + e.currentTarget.dataset.servicename
+    //         + "&servicetime=" + e.currentTarget.dataset.servicetime
+    //         + "&detailBtnStatus=1"
+    //     console.log(url)
+    //     wx.navigateTo({
+    //         url: url
+    //     })
+    // },
 
     search: function () {
         this.setData({
@@ -79,13 +79,14 @@ Page({
         })
     },
 
-    // tapBanner: function (e) {//todo 点击跳转
-    //     if (e.currentTarget.dataset.id != 0) {
-    //         wx.navigateTo({
-    //             url: "/pages/goods-details/index?id=" + e.currentTarget.dataset.id
-    //         })
-    //     }
-    // },
+    tapBanner: function (e) {//todo 点击跳转
+        console.log("tapBanner");
+        // if (e.currentTarget.dataset.id != 0) {
+        //      wx.navigateTo({
+        //          url: "/pages/goods-details/index?id=" + e.currentTarget.dataset.id
+        //      })
+        //  }
+    },
 
     onLoad: function (options) {
         // 生命周期函数--监听页面加载
@@ -169,7 +170,7 @@ Page({
             service: 'xiche.banner.query',
             place: 1
         }
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
+        netUtil.buildRequest(that, '/luchong/api', params, {
             onPre: function () {
                 console.log("page:" + that.data.page);
                 netUtil.showLoadingDialog(that);
@@ -193,67 +194,68 @@ Page({
     },
 
     loadMore: function (keyword) {
+
         console.log("loadmore page:" + that.data.page)
-        if (!that.data.needLoadMore) {
-            return;
-        }
-        if (that.data.page <= 0) {
-            that.setData({
-                page: 1
-            });
-        }
-        var params = {
-            service: 'xiche.card.list',
-            searchText: '',
-            page: this.data.page,
-            pagesize: this.data.pagesize
-        }
-        if (keyword != undefined) {
-            params.searchText = keyword
-        }
-        //请求前先将page+1，如果是失败就-1，否则当只有一项数据时，下拉刷新和底部加载同时调用，page连续用两次1
-        that.setData({
-            page: this.data.page + 1
-        });
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
-            onPre: function () {
-                console.log("page:" + that.data.page);
-                netUtil.showLoadingDialog(that);
-            },
-            onSuccess: function (json) {
-
-                netUtil.hideLoadingDialog(that);
-                if (json.card != undefined && json.card.length > 0) {
-                    console.log("page:" + that.data.page + "|resplist.length:" + json.card.length)
-                    if (that.data.scrollViewData != undefined && that.data.scrollViewData.length > 0) {
-                        for (var i = 0; i < json.card.length; i++) {
-                            that.data.scrollViewData.push(json.card[i])
-                        }
-                    }
-                    else {
-                        that.data.scrollViewData = json.card;
-                    }
-                    that.setData({
-                        scrollViewData: that.data.scrollViewData,
-                        // page: that.data.page + 1
-                    });
-                }
-                if (json.card == undefined || json.card.length < that.data.pagesize) {
-                    that.setData({
-                        needLoadMore: false
-                    });
-                }
-            },
-            onError: function (msgCanShow, code, hiddenMsg) {
-                that.setData({
-                    page: that.data.page - 1
-                });
-                netUtil.hideLoadingDialog(that);
-                // netUtil.showAlertDialog("请检查网络(状态码"+code+")", msgCanShow, false, "确定", null, null);
-                netUtil.showAlertDialog("提示", msgCanShow, false, "确定", null, null);
-
-            },
-        }).send()
+        // if (!that.data.needLoadMore) {
+        //     return;
+        // }
+        // if (that.data.page <= 0) {
+        //     that.setData({
+        //         page: 1
+        //     });
+        // }
+        // var params = {
+        //     service: 'xiche.card.list',
+        //     searchText: '',
+        //     page: this.data.page,
+        //     pagesize: this.data.pagesize
+        // }
+        // if (keyword != undefined) {
+        //     params.searchText = keyword
+        // }
+        // //请求前先将page+1，如果是失败就-1，否则当只有一项数据时，下拉刷新和底部加载同时调用，page连续用两次1
+        // that.setData({
+        //     page: this.data.page + 1
+        // });
+        // netUtil.buildRequest(that, '/luchong/api', params, {
+        //     onPre: function () {
+        //         console.log("page:" + that.data.page);
+        //         netUtil.showLoadingDialog(that);
+        //     },
+        //     onSuccess: function (json) {
+        //
+        //         netUtil.hideLoadingDialog(that);
+        //         if (json.card != undefined && json.card.length > 0) {
+        //             console.log("page:" + that.data.page + "|resplist.length:" + json.card.length)
+        //             if (that.data.scrollViewData != undefined && that.data.scrollViewData.length > 0) {
+        //                 for (var i = 0; i < json.card.length; i++) {
+        //                     that.data.scrollViewData.push(json.card[i])
+        //                 }
+        //             }
+        //             else {
+        //                 that.data.scrollViewData = json.card;
+        //             }
+        //             that.setData({
+        //                 scrollViewData: that.data.scrollViewData,
+        //                 // page: that.data.page + 1
+        //             });
+        //         }
+        //         if (json.card == undefined || json.card.length < that.data.pagesize) {
+        //             that.setData({
+        //                 needLoadMore: false
+        //             });
+        //         }
+        //     },
+        //     onError: function (msgCanShow, code, hiddenMsg) {
+        //         that.setData({
+        //             page: that.data.page - 1
+        //         });
+        //         netUtil.hideLoadingDialog(that);
+        //         // netUtil.showAlertDialog("请检查网络(状态码"+code+")", msgCanShow, false, "确定", null, null);
+        //         netUtil.showAlertDialog("提示", msgCanShow, false, "确定", null, null);
+        //
+        //     },
+        // }).send()
     },
 
     onShareAppMessage: function () {

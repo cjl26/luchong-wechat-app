@@ -118,7 +118,7 @@ Page({
                     service: 'xiche.card.detail.query',
                     system_card_number: e.scene,
                 }
-                netUtil.buildRequest(that, '/xicatcard/api', params, {
+                netUtil.buildRequest(that, '/luchong/api', params, {
                     onPre: function () {
                         netUtil.showLoadingDialog(that);
                     },
@@ -153,7 +153,7 @@ Page({
                     service: 'xiche.card.detail.query',
                     user_card_id: e.shareUserCardId,
                 }
-                netUtil.buildRequest(that, '/xicatcard/api', params, {
+                netUtil.buildRequest(that, '/luchong/api', params, {
                     onPre: function () {
                         netUtil.showLoadingDialog(that);
                     },
@@ -210,7 +210,7 @@ Page({
             total_fee: this.data.fee,
             pay_fee: this.data.fee,
         }
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
+        netUtil.buildRequest(that, '/luchong/api', params, {
             onPre: function () {
                 netUtil.showLoadingDialog(that);
             },
@@ -320,7 +320,7 @@ Page({
             ivStr: e.detail.iv
         }
 
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
+        netUtil.buildRequest(that, '/luchong/api', params, {
             onPre: function () {
                 netUtil.showLoadingDialog(that);
             },
@@ -361,7 +361,7 @@ Page({
             service: 'xiche.system.card.collect',
             card_number: this.data.scene
         }
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
+        netUtil.buildRequest(that, '/luchong/api', params, {
             onPre: function () {
                 netUtil.showLoadingDialog(that);
             },
@@ -405,7 +405,7 @@ Page({
             service: 'xiche.card.collect',//
             user_card_id: this.data.user_card_id
         }
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
+        netUtil.buildRequest(that, '/luchong/api', params, {
             onPre: function () {
                 netUtil.showLoadingDialog(that);
             },
@@ -533,7 +533,7 @@ Page({
                 user_card_id: this.data.user_card_id,
                 // sms_code: this.data.inputValue
             }
-            netUtil.buildRequest(that, '/xicatcard/api', params, {
+            netUtil.buildRequest(that, '/luchong/api', params, {
                 onPre: function () {
                     netUtil.showLoadingDialog(that);
                 },
@@ -572,7 +572,7 @@ Page({
             phone: this.data.phone,
             type: 1
         }
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
+        netUtil.buildRequest(that, '/luchong/api', params, {
             onPre: function () {
                 netUtil.showLoadingDialog(that);
             },

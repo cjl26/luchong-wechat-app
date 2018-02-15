@@ -119,7 +119,7 @@ Page({
 			user_card_id : this.data.userCardId
 		};
 
-		netUtil.buildRequest(that, '/xicatcard/api', params, {
+		netUtil.buildRequest(that, '/luchong/api', params, {
 			onPre: function() {
 				console.log("page:" + that.data.page);
 				netUtil.showLoadingDialog(that);

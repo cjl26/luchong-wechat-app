@@ -1,20 +1,36 @@
 <!--
 1. 头像 - 宠物数，被关注／关注数量，获取被点赞，获取被打赏的数量
 2. 具体列表
--->
-
-<view class="userinfo">
-    <image  class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+<view style="width:750rpx;height:{{scrollHeight}}px;background-color: #F2f2f2">
 </view>
 
+-->
+    <view class="userinfo">
+
+        <image  class="userinfo-avatar" src="{{ userInfo.avatarUrl }}"></image>
+        <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+        <text class="userinfo-nickname">{{ userInfo.avatarUrl }}</text>
+
+        <!--
+        <text class="userinfo-nickname">我的宠物数：0</text>
+        <text class="userinfo-nickname">邻居宠物数：0</text>
+        <text class="userinfo-nickname">关注：0</text>
+        <text class="userinfo-nickname">被关注：0</text>
+
+        <text class="userinfo-nickname">点赞：0</text>
+        <text class="userinfo-nickname">被点赞：0</text>
+
+        <text class="userinfo-nickname">收藏：0</text>
+        <text class="userinfo-nickname">收到打赏：0</text>
+        -->
+    </view>
 
 <scroll-view scroll-x="true" class="scroll-view-x">
   <view class="scroll-view-item">
   	<view class="{{currentTab==0 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="0">自己家</view>
   </view>
   <view class="scroll-view-item">
-  	<view class="{{currentTab==1 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="1">老王家</view>
+  	<view class="{{currentTab==1 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="1">邻居家</view>
   </view>
   <view class="scroll-view-item">
   	<view class="{{currentTab==2 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="2">赞过</view>

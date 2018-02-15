@@ -161,7 +161,7 @@ Page({
             service: 'xiche.card.detail.query',
             user_card_id: userCardId,
         }
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
+        netUtil.buildRequest(that, '/luchong/api', params, {
             onPre: function () {
                 // netUtil.showLoadingDialog(that);
             },
@@ -258,7 +258,7 @@ Page({
             //             service: 'xiche.card.detail.query',
             //             system_card_number: e.scene,
             //         }
-            //         netUtil.buildRequest(that, '/xicatcard/api', params, {
+            //         netUtil.buildRequest(that, '/luchong/api', params, {
             //             onPre: function () {
             //                 netUtil.showLoadingDialog(that);
             //             },
@@ -323,7 +323,7 @@ Page({
         that.setData({
             page: this.data.page + 1
         });
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
+        netUtil.buildRequest(that, '/luchong/api', params, {
             onPre: function () {
                 console.log("page:" + that.data.page);
                 netUtil.showLoadingDialog(that);
@@ -394,7 +394,7 @@ Page({
             service: 'xiche.banner.query',
             place: 2
         }
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
+        netUtil.buildRequest(that, '/luchong/api', params, {
             onPre: function () {
                 console.log("page:" + that.data.page);
                 netUtil.showLoadingDialog(that);

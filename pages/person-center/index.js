@@ -18,32 +18,32 @@ Page({
     onLoad() {
         that = this
         app.getUserOpedId(function () {
-            if (app.globalData.openid == '0' ) {
-
-            }else {
-                var params = {
-                    service: 'xiche.car.licence.query',
-                }
-                netUtil.buildRequest(that, '/xicatcard/api', params, {
-                    onPre: function () {
-                        netUtil.showLoadingDialog(that);
-                    },
-                    onSuccess: function (resp) {
-                        netUtil.hideLoadingDialog(that);
-                        if(resp.car_licence!=undefined){
-                            that.setData({
-                                carLicence: resp.car_licence
-                            })
-                        }
-
-                    },
-                    onError: function (msgCanShow, code, hiddenMsg) {
-                        netUtil.hideLoadingDialog(that);
-                        netUtil.showAlertDialog("提示", msgCanShow, false, "确定", null, null);
-
-                    },
-                }).send()
-            }
+            // if (app.globalData.openid == '0' ) {
+            //
+            // }else {
+            //     var params = {
+            //         service: 'xiche.car.licence.query',
+            //     }
+            //     netUtil.buildRequest(that, '/luchong/api', params, {
+            //         onPre: function () {
+            //             netUtil.showLoadingDialog(that);
+            //         },
+            //         onSuccess: function (resp) {
+            //             netUtil.hideLoadingDialog(that);
+            //             if(resp.car_licence!=undefined){
+            //                 that.setData({
+            //                     carLicence: resp.car_licence
+            //                 })
+            //             }
+            //
+            //         },
+            //         onError: function (msgCanShow, code, hiddenMsg) {
+            //             netUtil.hideLoadingDialog(that);
+            //             netUtil.showAlertDialog("提示", msgCanShow, false, "确定", null, null);
+            //
+            //         },
+            //     }).send()
+            // }
         })
         that = this;
         wx.getSystemInfo({
@@ -112,7 +112,7 @@ Page({
             ivStr: e.detail.iv
         }
 
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
+        netUtil.buildRequest(that, '/luchong/api', params, {
             onPre: function () {
                 netUtil.showLoadingDialog(that);
             },
@@ -242,7 +242,7 @@ Page({
                 car_licence: this.data.inputValue
             }
             that = this
-            netUtil.buildRequest(that, '/xicatcard/api', params, {
+            netUtil.buildRequest(that, '/luchong/api', params, {
                 onPre: function () {
                     netUtil.showLoadingDialog(that);
                 },

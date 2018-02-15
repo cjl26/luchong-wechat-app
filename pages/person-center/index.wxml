@@ -1,8 +1,9 @@
 <view style="width:750rpx;height:{{scrollHeight}}px;background-color: #F2f2f2">
     <view class="userinfo">
-        <image  class="userinfo-avatar" src="{{ userInfo.avatarUrl }}"
+        <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}"
                background-size="cover"></image>
         <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+        <text class="userinfo-nickname">{{ userInfo.avatarUrl }}</text>
         <view class="userinfo-edit">
             <view class="userinfo-phone" >
                 <view class="userinfo-phone-text"  wx:if="{{phone}}"  >{{phone}}</view>

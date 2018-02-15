@@ -200,7 +200,7 @@ Page({
         that.setData({
             page: this.data.page + 1
         });
-        netUtil.buildRequest(that, '/xicatcard/api', params, {
+        netUtil.buildRequest(that, '/luchong/api', params, {
             onPre: function () {
                 netUtil.showLoadingDialog(that);
             },

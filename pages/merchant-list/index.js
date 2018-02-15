@@ -69,7 +69,7 @@ Page({
                     page: that.data.page,
                     pagesize: that.data.pagesize
                 }
-                netUtil.buildRequest(that, '/xicatcard/api', params, {
+                netUtil.buildRequest(that, '/luchong/api', params, {
                     onPre: function () {
                         console.log("page:" + that.data.page);
                         netUtil.showLoadingDialog(that);

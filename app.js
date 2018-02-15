@@ -43,21 +43,25 @@ App({
                     wx.getUserInfo({
                         success: function (res) {//微信授权--用户点“允许”
                             that.globalData.exitFlag=false
-                            console.log('wx.getUserInfo成功')
                             that.globalData.userInfo=res.userInfo
+                            console.log('wx.getUserInfo成功')
                             var params = {
                                 service: 'xiche.wx.auth',
                                 code: that.globalData.code,
                                 nickName: res.userInfo.nickName,
-                                avaterUrl: res.userInfo.avaterUrl,
+                                avatarUrl: res.userInfo.avatarUrl,
                                 gender: res.userInfo.gender,
                                 province: res.userInfo.province,
                                 city: res.userInfo.city,
                                 country: res.userInfo.country,
                                 language: res.userInfo.language
                             }
+                            console.log('res.userInfo = ' + JSON.stringify(res.userInfo))
+                            console.log('that.globalData.userInfo = ' + JSON.stringify(that.globalData.userInfo))
 
-                            netUtil.buildRequest(that, '/xicatcard/api', params, {
+
+
+                            netUtil.buildRequest(that, '/luchong/api', params, {
                                 onPre: function () {
                                     netUtil.showLoadingDialog(that);
                                 },
@@ -139,9 +143,10 @@ App({
 
     globalData: {
         isDebug: true,
-        // apiHeadUrl: 'http://127.0.0.1:8086',//切换服务器
-       apiHeadUrl: 'https://hicatcitycard.6so2o.com',
-        js_version: '0.0.39',
+        apiHeadUrl: 'http://127.0.0.1:8088',//切换服务器
+        //apiHeadUrl: 'http://192.168.1.101:8088',//切换服务器
+        //apiHeadUrl: 'https://hicatcitycard.6so2o.com',
+        js_version: '0.0.1',
         //公共参数--开始
         openid: "0",
         // openid: "oj34W0fKt6kntIyyuEBtNkkLlFxc",

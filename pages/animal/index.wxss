@@ -14,3 +14,23 @@
 .no-group{position: absolute;width: 100%}
 .no-group image{width: 300rpx;height: 300rpx;}
 .no-group>view{margin-top: 240rpx;}
+
+
+.userinfo {
+    margin-top: -50rpx;
+    display: flex;
+    flex-direction: column;
+    padding: 50rpx 0;
+    align-items: center;
+    background-image: url("http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png");
+    background-size: cover;
+    width: 750rpx;
+    height: 364rpx;
+}
+
+.userinfo-avatar {
+    width: 160rpx;
+    height: 160rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}

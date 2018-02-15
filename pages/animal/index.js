@@ -20,33 +20,17 @@ Page({
     onShow:function(){
         this.setCurrentData()
     },
+
     setCurrentData:function(){
         if(!this.data.loading){
             return false
         }
+
+        this.setData({
+            userInfo: app.globalData.userInfo
+        })
+
         var self = this;
-/*        app.request.wxRequest({
-            url:'group-list',
-            data:{page:self.data.page,cid:self.data.currentTab},
-            success:function(res){
-                if(!res){
-                    self.data.loading=false
-                    self.setData({
-                        loading:false
-                    })
-                    return;
-                }
-                if(res.length<3){
-                    self.setData({
-                        loading:false
-                    })
-                }
-                var groupData = self.data.groupData = self.data.groupData.concat(res)
-                self.setData({
-                    groupList:groupData
-                })
-            }
-        })*/
     },
     showGoodsDetail:function(e){
         var id = e.currentTarget.dataset.id;

@@ -1,4 +1,9 @@
 <!--index.wxml-->
+<!-- 1. 广告
+     2. 文章
+     3. 宠物美图
+     4. 附近的宠物
+-->
 <!--1px = 750/320 = 2.34rpx;-->
 <view class="container" style="min-height:{{scrollHeight}}px;">
     <view scroll-y="true" class="list" >
@@ -25,13 +30,17 @@
             <!--</view>-->
             <!--<image class="bar_img" src="/images/xiche/search.png" bindtap="search"></image>-->
         <!--</view>-->
+
+        <!-- 搜索
         <view class='search-container'>
             <input bindinput="bindKeyInput"></input>
             <image class="img-search-input" src='/images/transaction-list/search_input.png'></image>
             <image class="img-search-button" src='/images/transaction-list/search_button.png' bindtap="search"></image>
 
         </view>
+        -->
 
+        <!-- 搜索
         <view class="scroll-list" hidden="{{scrollViewData ? false : true}}">
             <view class="a-scroll" wx:for-items="{{scrollViewData}}" wx:key="{{index}}"
                   bindtap="toCardDetailTap" data-cardname="{{item.card_name}}" data-pictureurl="{{item.picture_url}}" data-detail="{{item.detail}}"
@@ -41,16 +50,15 @@
                     <view class="scroll-name">
                         {{item.card_name}}
                     </view>
-                    <!--<view class="scroll-time">10次</view>-->
+                    <view class="scroll-time">10次</view>
                 </view>
                 <view class="scroll-down" style="background-image:url({{item.picture_url}});background-size: cover;">
                     <image src="/images/luchong/cover_buy.png" class="img" width="655rpx" height="341rpx"/>
                 </view>
             </view>
-
         </view>
-
         <view hidden="{{needLoadMore ? true : false}}" class="no-more-goods">没有更多啦</view>
+        -->
     </view>
     <!--</scroll-view>-->
 
