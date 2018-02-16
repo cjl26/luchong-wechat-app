@@ -16,7 +16,7 @@
   height:282rpx;
 }
 
-swiper-item image {
+.swiper-item image {
   width: 100%;
   display: inline-block;
   overflow: hidden;
@@ -231,7 +231,46 @@ image{width: 100%;vertical-align: top;display: block;}
   padding-left: 20rpx;
   padding-right: 20rpx;
 }
+
 .puzzle-logo{
+  width: 140rpx;
+  height: 40rpx;
+  background: url("http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png") no-repeat;
+  background-size: 100%;
+  top: 0;
+  right: 16rpx;
+  color: red;
+  text-align: center;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+.puzzle-logo-qa{
+  width: 140rpx;
+  height: 40rpx;
+  background: url("http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png") no-repeat;
+  background-size: 100%;
+  top: 0;
+  right: 16rpx;
+  color: red;
+  text-align: center;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.puzzle-logo-cat{
+  width: 140rpx;
+  height: 40rpx;
+  background: url("http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png") no-repeat;
+  background-size: 100%;
+  top: 0;
+  right: 16rpx;
+  color: red;
+  text-align: center;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.puzzle-logo-dog{
   width: 140rpx;
   height: 40rpx;
   background: url("http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png") no-repeat;
@@ -266,8 +305,131 @@ image{width: 100%;vertical-align: top;display: block;}
     -webkit-box-orient: vertical;
 }
 
+/*
+秒杀begin
 
-/*一些科室begin*/
+*/
+.skill {
+    background-color: white;
+}
+
+.skill-view{
+    padding : 5rpx;
+    border-bottom: 1px solid black;
+}
+.skill-top {
+    height: 40rpx;
+    line-height: 40rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    padding-bottom: 10rpx;
+    padding-top: 10rpx;
+    font-size: 28rpx;
+}
+
+.skillt-l, .skillt-l image {
+    width:  40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+}
+
+.skillt-m {
+    font-size: 28rpx;
+    margin-left: 0rpx;
+    margin-right: 30rpx;
+    color: #222;
+}
+.skillt-m image {
+    width:  40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+}
+.skillt-m text {
+    font-size: 30rpx;
+    text-align: center;
+    height: 40rpx;
+    line-height: 40rpx;
+    padding-left: 5rpx;
+    padding-right: 5rpx;
+    margin-left: 5rpx;
+    margin-right: 5rpx;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*
+.skillt-m text {
+    font-size: 24rpx;
+    border: 1px solid #dfdfdf;
+    border-radius: 5rpx;
+    text-align: center;
+    height: 40rpx;
+    line-height: 40rpx;
+    padding-left: 6rpx;
+    padding-right: 6rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*/
+.skillt-r {
+    position: relative;
+    padding-right: 32rpx;
+}
+.skillt-r navigator {
+    color: #ff3e3f;
+}
+.skillt-r icon {
+    width: 18rpx;
+    height: 18rpx;
+    display: inline-block;
+    border-top: solid 1px #ff3e3f;
+    border-right: solid 1px #ff3e3f;
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    right: 0;
+    top: 12rpx;
+}
+
+
+.skill-list {
+    padding-top: .35rem;
+    height: 200rpx;
+    display: flex;
+    white-space: nowrap;
+}
+.skill-list .skill-li {
+    width: 24%;
+    height: 20rpx;
+    position: relative;
+    margin-left: 4%;
+    text-align: center;
+    display: inline-block;
+}
+.skill-list .skill-li:last-child{margin-right: 4%;}
+.skill-promotion {
+    background-color: #EFA2B5;
+    color: white;
+    font-size: 24rpx;
+    width: 150rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    position: absolute;
+    top: 135rpx;
+    right: 0;
+    border-top-left-radius: 20rpx;
+    border-bottom-left-radius: 20rpx;
+}
+.skill-img, .skill-img image {
+    width: 180rpx;
+    height: 180rpx;
+}
+
+
+/*问答*/
 .mt30 {margin-top: 30rpx;}
 
 .some-room {

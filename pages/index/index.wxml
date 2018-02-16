@@ -40,7 +40,7 @@
 
         <view class="scroll-list">
             <view class="some-room mt30">
-                <view class="puzzle-logo plr20">
+                <view class="puzzle-logo-qa plr20">
                     <text>问答</text>
                 </view>
                 <view class="sroom-l box-sizing fl plr20">
@@ -53,10 +53,251 @@
             </view>
         </view>
 
-        <!--猫-->
+        <!--猫 宠物名/宠物头像/点赞数/粉丝数 主人名/头像 左滑4张图-->
+
+        <view class="skill mt30" id="skill_sec">
+            <view class="puzzle-logo-cat plr20">
+                <text>猫猫</text>
+            </view>
+
+            <view class="skill-view">
+                <view class="skill-top clearfix">
+                    <view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>肥仔00</text>
+                        </view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>粉丝0</text>
+                        </view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>点赞</text>
+                        </view>
+                    </view>
+                    <view class="skillt-r fr"><navigator url="">更多<icon></icon></navigator></view>
+                </view>
+                <scroll-view scroll-x="true" class="skill-list" id="skill_list">
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                </scroll-view>
+            </view>
+            <view>
+                <view class="skill-top clearfix">
+                    <view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>肥仔00</text>
+                        </view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>粉丝0</text>
+                        </view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>点赞</text>
+                        </view>
+                    </view>
+                    <view class="skillt-r fr"><navigator url="">更多<icon></icon></navigator></view>
+                </view>
+                <scroll-view scroll-x="true" class="skill-list" id="skill_list">
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+
 
         <!--狗-->
+        <view class="skill mt30" id="skill_sec">
+            <view class="puzzle-logo-dog plr20">
+                <text>狗狗</text>
+            </view>
 
+            <view class="skill-view">
+                <view class="skill-top clearfix">
+                    <view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>肥仔00</text>
+                        </view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>粉丝0</text>
+                        </view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>点赞</text>
+                        </view>
+                    </view>
+                    <view class="skillt-r fr"><navigator url="">更多<icon></icon></navigator></view>
+                </view>
+                <scroll-view scroll-x="true" class="skill-list" id="skill_list">
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                </scroll-view>
+            </view>
+            <view>
+                <view class="skill-top clearfix">
+                    <view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>肥仔00</text>
+                        </view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>粉丝0</text>
+                        </view>
+                        <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        <view class="skillt-m fl">
+                            <text>点赞</text>
+                        </view>
+                    </view>
+                    <view class="skillt-r fr"><navigator url="">更多<icon></icon></navigator></view>
+                </view>
+                <scroll-view scroll-x="true" class="skill-list" id="skill_list">
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                    <view class="skill-li">
+                        <navigator url="">
+                            <view class="skill-promotion">1.4折</view>
+                            <view class="skill-img"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
+                        </navigator>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
 
         <!--<view class="bar7" wx:if="{{banners}}">-->
             <!--<view class="bar7_input">-->
