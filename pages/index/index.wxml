@@ -117,7 +117,7 @@
                     </view>
                 </scroll-view>
             </view>
-            <view>
+            <view class="skill-view">
                 <view class="skill-top clearfix">
                     <view>
                         <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>
@@ -240,7 +240,7 @@
                     </view>
                 </scroll-view>
             </view>
-            <view>
+            <view class="skill-view">
                 <view class="skill-top clearfix">
                     <view>
                         <view class="skillt-l fl"><image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg" alt=""></image></view>

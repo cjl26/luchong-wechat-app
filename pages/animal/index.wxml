@@ -5,65 +5,84 @@
 </view>
 
 -->
+<!--
+<view class="some-room mt30">
+    <view class="sroom-l box-sizing fl plr20">
+        <text class="puzzle-title">QA标题</text>
+        <text class="puzzle-name">QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情-QA详情</text>
+    </view>
+    <view class="sroom-r fr">
+        <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg"></image>
+    </view>
+</view>
+-->
+
+<view class="container" style="min-height:{{scrollHeight}}px;">
     <view class="userinfo">
-
-        <image  class="userinfo-avatar" src="{{ userInfo.avatarUrl }}"></image>
-        <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
-        <text class="userinfo-nickname">{{ userInfo.avatarUrl }}</text>
-
-        <!--
-        <text class="userinfo-nickname">我的宠物数：0</text>
-        <text class="userinfo-nickname">邻居宠物数：0</text>
-        <text class="userinfo-nickname">关注：0</text>
-        <text class="userinfo-nickname">被关注：0</text>
-
-        <text class="userinfo-nickname">点赞：0</text>
-        <text class="userinfo-nickname">被点赞：0</text>
-
-        <text class="userinfo-nickname">收藏：0</text>
-        <text class="userinfo-nickname">收到打赏：0</text>
-        -->
+        <view class="userinfo-avatar fl">
+            <image src="{{ userInfo.avatarUrl }}"></image>
+        </view>
+        <view class="userinfo-detail fr">
+            <text class="userinfo-nickname">{{ userInfo.nickName }}\n</text>
+            <text class="userinfo-nickname">我的宠物数：0\t</text>
+            <text class="userinfo-nickname">邻居宠物数：0\n</text>
+            <text class="userinfo-nickname">关注：0\t</text>
+            <text class="userinfo-nickname">被关注：0\n</text>
+            <text class="userinfo-nickname">点赞：0\t</text>
+            <text class="userinfo-nickname">被点赞：0\n</text>
+            <text class="userinfo-nickname">收藏：0\n</text>
+            <text class="userinfo-nickname">收到打赏：0</text>
+        </view>
     </view>
 
-<scroll-view scroll-x="true" class="scroll-view-x">
-  <view class="scroll-view-item">
-  	<view class="{{currentTab==0 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="0">自己家</view>
-  </view>
-  <view class="scroll-view-item">
-  	<view class="{{currentTab==1 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="1">邻居家</view>
-  </view>
-  <view class="scroll-view-item">
-  	<view class="{{currentTab==2 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="2">赞过</view>
-  </view>
-  <view class="scroll-view-item">
-  	<view class="{{currentTab==3 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="3">赏过</view>
-  </view>
-</scroll-view>
+    <scroll-view scroll-x="true" class="scroll-view-x">
+        <view class="scroll-view-item">
+            <view class="{{currentTab==0 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="0">自己家</view>
+        </view>
+        <view class="scroll-view-item">
+            <view class="{{currentTab==1 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="1">邻居家</view>
+        </view>
+        <view class="scroll-view-item">
+            <view class="{{currentTab==2 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="2">赞过</view>
+        </view>
+        <view class="scroll-view-item">
+            <view class="{{currentTab==3 ? 'swiper-on' : ''}}" bindtap="swichNav" data-current="3">赏过</view>
+        </view>
+    </scroll-view>
 
 
-<swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange" style="height: {{windowHeight-36}}px;">
-	<swiper-item>
-		<scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}" lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
-			<template is="groupList" data="{{groupList:groupList,loading:loading}}"/>
-		</scroll-view>
-	</swiper-item>
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange"
+            style="height:{{windowHeight-36}}px;">
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
+                         lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
 
-	<swiper-item>
-		<scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}" lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
-			<template is="groupList" data="{{groupList:groupList,loading:loading}}"/>
-		</scroll-view>
-	</swiper-item>
 
-	<swiper-item>
-		<scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}" lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
-			<template is="groupList" data="{{groupList:groupList,loading:loading}}"/>
-		</scroll-view>
-	</swiper-item>
 
-	<swiper-item>
-		<scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}" lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
-			<template is="groupList" data="{{groupList:groupList,loading:loading}}"/>
-		</scroll-view>
-	</swiper-item>
+            </scroll-view>
+        </swiper-item>
 
-</swiper>
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
+                         lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
+                <view>自己家22</view>
+            </scroll-view>
+        </swiper-item>
+
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
+                         lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
+                <view>自己家33</view>
+            </scroll-view>
+        </swiper-item>
+
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
+                         lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
+                <view>自己家44</view>
+            </scroll-view>
+        </swiper-item>
+
+    </swiper>
+
+</view>

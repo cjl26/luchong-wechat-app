@@ -15,22 +15,55 @@
 .no-group image{width: 300rpx;height: 300rpx;}
 .no-group>view{margin-top: 240rpx;}
 
+/********** 公共样式 **********/
+.fl{float: left;}
+.fr{float: right;}
+.container {
+  background-color: #f9f4f4;
+}
 
 .userinfo {
-    margin-top: -50rpx;
-    display: flex;
-    flex-direction: column;
-    padding: 50rpx 0;
-    align-items: center;
+    width:100%;
     background-image: url("http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png");
-    background-size: cover;
-    width: 750rpx;
-    height: 364rpx;
+    height: 250rpx;
 }
 
 .userinfo-avatar {
-    width: 160rpx;
-    height: 160rpx;
-    margin: 20rpx;
+    width: 35%;
+}
+
+.userinfo-avatar image{
+    width: 190rpx;
+    height: 190rpx;
+    margin: 30rpx;
     border-radius: 50%;
 }
+
+.userinfo-detail{
+    width: 65%;
+    margin-top:10rpx;
+    margin-bottom:10rpx;
+}
+
+.userinfo-nickname {
+    color: #FFF;
+}
+
+/*自己家*/
+.home-pet{
+
+}
+
+/*邻居家*/
+.friend-pet{
+}
+
+/*赞过*/
+.praise{
+}
+
+/*打赏过*/
+.pay{
+
+}
+

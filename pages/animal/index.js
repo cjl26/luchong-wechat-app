@@ -32,6 +32,8 @@ Page({
 
         var self = this;
     },
+
+
     showGoodsDetail:function(e){
         var id = e.currentTarget.dataset.id;
         if(!id) return ;
