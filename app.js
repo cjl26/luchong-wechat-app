@@ -46,7 +46,7 @@ App({
                             that.globalData.userInfo=res.userInfo
                             console.log('wx.getUserInfo成功')
                             var params = {
-                                service: 'xiche.wx.auth',
+                                service: 'luchong.wx.auth',
                                 code: that.globalData.code,
                                 nickName: res.userInfo.nickName,
                                 avatarUrl: res.userInfo.avatarUrl,

@@ -103,6 +103,7 @@ Page({
         console.log("apiBannerQuery0")
         // getApp().getUserOpedId(this.apiBannerQuery, false)
         this.apiBannerQuery()
+        this.apiQaQuery()
         getApp().getUserOpedId(function () {
 
         })
@@ -145,6 +146,7 @@ Page({
             scrollViewData: null,
             needLoadMore: true,
             banners: null,
+            qaList : null,
             keyWork: null
         })
 
@@ -152,6 +154,7 @@ Page({
             wx.stopPullDownRefresh()
             console.log("apiBannerQuery3")
             that.apiBannerQuery()
+            that.apiQaQuery()
         }, 1000)
 
 
@@ -165,10 +168,10 @@ Page({
 
     //获取广告
     apiBannerQuery: function () {
-        console.log("apiBannerQuery exitFlag:" + app.globalData.exitFlag)
+        //console.log("apiBannerQuery exitFlag:" + app.globalData.exitFlag)
 
         var params = {
-            service: 'xiche.banner.query',
+            service: 'luchong.banner.query',
             place: 1
         }
         netUtil.buildRequest(that, '/luchong/api', params, {
@@ -191,10 +194,33 @@ Page({
         }).send()
     },
 
-    //获取问答信息
+    //获取问答信息 - 多行需要调css+html
     apiQaQuery : function () {
+        console.log("apiQaQuery ")
+        var params = {
+            service: 'luchong.qa.query',
+            type: 2,
+            page: 1,
+            page_size: 10
+        }
+        netUtil.buildRequest(that, '/luchong/api', params, {
+            onPre: function () {
+                console.log("page:" + that.data.page);
+                netUtil.showLoadingDialog(that);
+            },
+            onSuccess: function (data) {
+                netUtil.hideLoadingDialog(that);
+                that.setData({
+                    qaList: data.qasList
+                });
+                that.loadMore()
 
+            }, onError: function (msgCanShow, code, hiddenMsg) {
+                netUtil.hideLoadingDialog(that);
+                netUtil.showAlertDialog("提示", msgCanShow, false, "确定", null, null);
 
+            }
+        }).send()
     },
 
     onReady: function (e) {
@@ -268,7 +294,7 @@ Page({
 
     onShareAppMessage: function () {
         return {
-            title: '喜卡',
+            title: '撸宠',
             path: '/pages/index/index',
             success: function (res) {
                 // 转发成功
