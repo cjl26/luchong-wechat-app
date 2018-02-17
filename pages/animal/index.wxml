@@ -56,6 +56,65 @@
         <swiper-item>
             <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
                          lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
+                <view class="home-pet">
+                    <!--
+                    1.
+                    2. 右边： 年龄 体重 签名
+                    3. 粉丝数 相册收藏 点赞 打赏数量
+                    -->
+                    <view class="home-pet-info" >
+                        <!--左边：头像，卡号-->
+                        <view class="home-pet-avatar fl" >
+                            <image src="{{ userInfo.avatarUrl }}"></image>
+                            <view class="home-pet-number">
+                                <text>萌宠号\n</text>
+                                <text>99999999</text>
+                            </view>
+                        </view>
+                        <!--姓名 类别，性别 -->
+                        <view class="home-pet-detail-name fr">
+                            <image class="home-pet-type" src="{{ userInfo.avatarUrl }}"></image>
+                            <image class="home-pet-gender">已绝育</image>
+                            <text class="home-pet-name">肥仔肥仔肥仔肥仔肥仔</text>
+                        </view>
+                        <!--年龄 体重-->
+                        <view class="home-pet-detail-weight fr">
+                            <image class="home-pet-birthday-image">已绝育</image>
+                            <text class="home-pet-birthday">2018-01-01</text>
+                            <text class="">2018kg\n</text>
+                            <text class="">签名签名签名签名签名签名签名签名签名签名签名签名签名签名签名签名签名</text>
+
+                        </view>
+                        <!--
+                        <view class="">
+                            <text>自己家 detail222</text>
+                        </view>
+                        -->
+                    </view>
+                    <view class="home-pet-info" >
+                        <!--
+                        <view class="home-pet-avatar fl" >
+                            <image src="{{ userInfo.avatarUrl }}"></image>
+                            <text>自己家1\n</text>
+
+                        </view>
+                        <view class="home-pet-detail fr">
+                            <text>自己家 detail</text>
+                        </view>
+                        -->
+                    </view>
+                    <view class="home-pet-add">
+                    </view>
+                </view>
+
+                <view >
+                    <image src="http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png"></image>
+
+                    <view>
+                        <image src="{{ userInfo.avatarUrl }}"></image>
+                        <image src="http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png"></image>
+                    </view>
+                </view>
 
 
 

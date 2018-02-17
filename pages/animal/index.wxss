@@ -17,6 +17,7 @@
 
 /********** 公共样式 **********/
 .fl{float: left;}
+.fc{float: center;}
 .fr{float: right;}
 .container {
   background-color: #f9f4f4;
@@ -49,9 +50,122 @@
     color: #FFF;
 }
 
-/*自己家*/
+/*自己家
+    width:100%;
+*/
 .home-pet{
+    width:96%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
 
+.home-pet-info{
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    background-image: url("http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png");
+    border-radius: 20rpx;
+    height: 250rpx;
+}
+
+.home-pet-avatar{
+    width: 25%;
+    text-align: center;
+}
+
+.home-pet-avatar image{
+    width: 100rpx;
+    height: 100rpx;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    margin-bottom: 10rpx;
+    border-radius: 50%;
+}
+
+.home-pet-avatar text{
+    font-weight: bold;
+    font-size: 30rpx;
+    color: #222222;
+}
+
+.home-pet-number{
+    margin : 10rpx;
+    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
+    border-radius: 15rpx;
+}
+
+/*
+
+
+
+*/
+.home-pet-detail-name{
+    width: 72%;
+    margin-top : 10rpx;
+}
+
+.home-pet-type{
+    margin-bottom : 15rpx;
+    line-height: 60rpx;
+    width: 50rpx;
+    height: 50rpx;
+    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
+    border-radius: 50%;
+}
+
+.home-pet-gender{
+    margin-left : 10rpx;
+    margin-bottom : 15rpx;
+    line-height: 60rpx;
+    width : 100rpx;
+    height : 40rpx;
+    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
+    border-radius: 5rpx;
+}
+
+.home-pet-name{
+    margin-left : 10rpx;
+    line-height: 60rpx;
+    font-weight: bold;
+    font-size: 35rpx;
+    color: #222222;
+}
+
+.home-pet-detail-weight{
+    width: 72%;
+}
+
+/*
+    margin-right : 20rpx;
+    color: #222222;
+
+    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
+    line-height: 50rpx;
+*/
+
+
+.home-pet-birthday-image{
+    width : 40rpx;
+    height : 40rpx;
+    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
+    border-radius: 50%;
+    line-height: 50rpx;
+}
+
+.home-pet-birthday{
+    background-color: #EFA2B5;
+    margin-left : 10rpx;
+    font-size: 30rpx;
+    color: #222222;
+    line-height: 50rpx;
+}
+
+.home-pet-add{
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    background-image: url("http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png");
+    border-radius: 20rpx;
+    height: 150rpx;
 }
 
 /*邻居家*/
