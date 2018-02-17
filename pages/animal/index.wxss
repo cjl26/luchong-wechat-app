@@ -94,11 +94,6 @@
     border-radius: 15rpx;
 }
 
-/*
-
-
-
-*/
 .home-pet-detail-name{
     width: 72%;
     margin-top : 10rpx;
@@ -135,18 +130,10 @@
     width: 72%;
 }
 
-/*
-    margin-right : 20rpx;
-    color: #222222;
-
-    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
-    line-height: 50rpx;
-*/
-
-
 .home-pet-birthday-image{
     width : 40rpx;
     height : 40rpx;
+    margin-right : 10rpx;
     background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
     border-radius: 50%;
     line-height: 50rpx;
@@ -155,6 +142,27 @@
 .home-pet-birthday{
     background-color: #EFA2B5;
     margin-left : 10rpx;
+    margin-right : 20rpx;
+    font-size: 30rpx;
+    color: #222222;
+    line-height: 50rpx;
+}
+
+
+.home-pet-birthday-weight{
+    width : 40rpx;
+    height : 40rpx;
+    margin-left : 20rpx;
+    margin-right : 10rpx;
+    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
+    border-radius: 50%;
+    line-height: 50rpx;
+}
+
+.home-pet-weight{
+    background-color: #EFA2B5;
+    margin-left : 10rpx;
+    margin-right : 20rpx;
     font-size: 30rpx;
     color: #222222;
     line-height: 50rpx;
@@ -170,14 +178,226 @@
 
 /*邻居家*/
 .friend-pet{
+    width:96%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.friend-pet-info{
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    background-image: url("http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png");
+    border-radius: 20rpx;
+    height: 200rpx;
+}
+
+.friend-pet-avatar{
+    width: 25%;
+    text-align: center;
+}
+
+.friend-pet-avatar image{
+    width: 100rpx;
+    height: 100rpx;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    margin-bottom: 10rpx;
+    border-radius: 50%;
+}
+
+.friend-pet-avatar text{
+    font-weight: bold;
+    font-size: 30rpx;
+    color: #222222;
+}
+
+.friend-pet-number{
+    margin : 10rpx;
+    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
+    border-radius: 15rpx;
+}
+
+.friend-pet-detail-name{
+    width: 72%;
+    margin-top : 10rpx;
+}
+
+.friend-pet-type{
+    margin-bottom : 15rpx;
+    line-height: 60rpx;
+    width: 50rpx;
+    height: 50rpx;
+    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
+    border-radius: 50%;
+}
+
+.friend-pet-gender{
+    margin-left : 10rpx;
+    margin-bottom : 15rpx;
+    line-height: 60rpx;
+    width : 100rpx;
+    height : 40rpx;
+    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
+    border-radius: 5rpx;
+}
+
+.friend-pet-name{
+    margin-left : 10rpx;
+    line-height: 60rpx;
+    font-weight: bold;
+    font-size: 35rpx;
+    color: #222222;
+}
+
+.friend-pet-detail-weight{
+    width: 72%;
+}
+
+.friend-pet-birthday-image{
+    width : 40rpx;
+    height : 40rpx;
+    margin-right : 10rpx;
+    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
+    border-radius: 50%;
+    line-height: 50rpx;
+}
+
+.friend-pet-birthday{
+    background-color: #EFA2B5;
+    margin-left : 10rpx;
+    margin-right : 20rpx;
+    font-size: 30rpx;
+    color: #222222;
+    line-height: 50rpx;
+}
+
+
+.friend-pet-birthday-weight{
+    width : 40rpx;
+    height : 40rpx;
+    margin-left : 20rpx;
+    margin-right : 10rpx;
+    background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3139238147,2100579889&fm=27&gp=0.jpg");
+    border-radius: 50%;
+    line-height: 50rpx;
+}
+
+.friend-pet-weight{
+    background-color: #EFA2B5;
+    margin-left : 10rpx;
+    margin-right : 20rpx;
+    font-size: 30rpx;
+    color: #222222;
+    line-height: 50rpx;
 }
 
 /*赞过*/
 .praise{
+    width:96%;
+    margin-right: 2%;
+    margin-left: 2%;
+    position: relative;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.praise-list{
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    position: relative;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.praise-row {
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    flex-direction: row;
+    align-content: flex-start;
+
+    display: flex;
+    justify-content: flex-start;
+    align-self: stretch;
+}
+
+.praise-row .praise-item {
+    width: 33%;
+    background-color: #eee;
+    margin: 5rpx;
+}
+
+.praise-row .praise-item .main-image{
+    width: 100%;
+    height: 180rpx;
+    display: block;
+    border-radius: 20rpx;
+}
+
+.praise-item-detail{
+    margin-top: 5rpx;
+    margin-bottom: 5rpx;
+}
+
+.praise-pet-avatar-image{
+    width : 30rpx;
+    height : 30rpx;
+    border-radius: 50%;
+}
+
+.praise-pet-avatar-nickname{
+    margin-left : 10rpx;
 }
 
 /*打赏过*/
-.pay{
-
+.reward{
+    width:96%;
+    margin-right: 2%;
+    margin-left: 2%;
+    position: relative;
+    animation: fadeInUp 0.3s ease-out;
 }
 
+.reward-list{
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    position: relative;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.reward-row {
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    flex-direction: row;
+    align-content: flex-start;
+
+    display: flex;
+    justify-content: flex-start;
+    align-self: stretch;
+}
+
+.reward-row .reward-item {
+    width: 33%;
+    background-color: #eee;
+    margin: 5rpx;
+}
+
+.reward-row .reward-item .main-image{
+    width: 100%;
+    height: 180rpx;
+    display: block;
+    border-radius: 20rpx;
+}
+
+.reward-item-detail{
+    margin-top: 5rpx;
+    margin-bottom: 5rpx;
+}
+
+.reward-pet-avatar-image{
+    width : 30rpx;
+    height : 30rpx;
+    border-radius: 50%;
+}
+
+.reward-pet-avatar-nickname{
+    margin-left : 10rpx;
+}

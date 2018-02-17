@@ -1,30 +1,5 @@
 <view style="width:750rpx;height:{{scrollHeight}}px;background-color: #F2f2f2">
-    <view class="userinfo">
-        <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}"
-               background-size="cover"></image>
-        <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
-        <text class="userinfo-nickname">{{ userInfo.avatarUrl }}</text>
-        <view class="userinfo-edit">
-            <view class="userinfo-phone" >
-                <view class="userinfo-phone-text"  wx:if="{{phone}}"  >{{phone}}</view>
-                <button class="userinfo-phone-btn"  wx:if="{{!phone}}"  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">点击绑定手机</button>
-                <!--<image class="userinfo-phone-img" src="/images/xiche/edit.png" wx:if="{{!phone}}"></image>-->
-            </view>
 
-            <view class="userinfo-car"  wx:if="{{carLicence}}" bindtap="toEditCarLicenseTap">
-                <view class="userinfo-car-text" >
-                    {{carLicence}}
-                </view>
-                <image class="userinfo-car-img" src="/images/xiche/edit.png" ></image>
-            </view>
-            <view class="userinfo-car" wx:if="{{!carLicence}}" ><view class="userinfo-car-text" bindtap="toEditCarLicenseTap">
-                绑定车牌
-            </view>
-                <image class="userinfo-car-img" src="/images/xiche/edit.png" ></image>
-            </view>
-
-        </view>
-    </view>
     <view class="person-item">
         <view class="item-title">
             <view class="title-color"></view>

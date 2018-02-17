@@ -53,15 +53,11 @@
 
     <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange"
             style="height:{{windowHeight-36}}px;">
+        <!--自己家-->
         <swiper-item>
             <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
                          lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
                 <view class="home-pet">
-                    <!--
-                    1.
-                    2. 右边： 年龄 体重 签名
-                    3. 粉丝数 相册收藏 点赞 打赏数量
-                    -->
                     <view class="home-pet-info" >
                         <!--左边：头像，卡号-->
                         <view class="home-pet-avatar fl" >
@@ -79,66 +75,237 @@
                         </view>
                         <!--年龄 体重-->
                         <view class="home-pet-detail-weight fr">
-                            <image class="home-pet-birthday-image">已绝育</image>
+                            <image class="home-pet-birthday-image"></image>
                             <text class="home-pet-birthday">2018-01-01</text>
-                            <text class="">2018kg\n</text>
-                            <text class="">签名签名签名签名签名签名签名签名签名签名签名签名签名签名签名签名签名</text>
-
+                            <image class="home-pet-birthday-weight"></image>
+                            <text class="home-pet-weight">2018kg\n</text>
                         </view>
-                        <!--
-                        <view class="">
-                            <text>自己家 detail222</text>
+                        <!--被收藏 点赞-->
+                        <view class="home-pet-detail-weight fr">
+                            <image class="home-pet-birthday-image"></image>
+                            <text class="home-pet-birthday">2018-01-01</text>
+                            <image class="home-pet-birthday-weight"></image>
+                            <text class="home-pet-weight">2018kg\n</text>
                         </view>
-                        -->
+                        <!--粉丝数 打赏数量-->
+                        <view class="home-pet-detail-weight fr">
+                            <image class="home-pet-birthday-image"></image>
+                            <text class="home-pet-birthday">2018-01-01</text>
+                            <image class="home-pet-birthday-weight"></image>
+                            <text class="home-pet-weight">2018kg\n</text>
+                        </view>
                     </view>
                     <view class="home-pet-info" >
-                        <!--
+                        <!--左边：头像，卡号-->
                         <view class="home-pet-avatar fl" >
                             <image src="{{ userInfo.avatarUrl }}"></image>
-                            <text>自己家1\n</text>
-
+                            <view class="home-pet-number">
+                                <text>萌宠号\n</text>
+                                <text>99999999</text>
+                            </view>
                         </view>
-                        <view class="home-pet-detail fr">
-                            <text>自己家 detail</text>
+                        <!--姓名 类别，性别 -->
+                        <view class="home-pet-detail-name fr">
+                            <image class="home-pet-type" src="{{ userInfo.avatarUrl }}"></image>
+                            <image class="home-pet-gender">已绝育</image>
+                            <text class="home-pet-name">肥仔肥仔肥仔肥仔肥仔</text>
                         </view>
-                        -->
+                        <!--年龄 体重-->
+                        <view class="home-pet-detail-weight fr">
+                            <image class="home-pet-birthday-image"></image>
+                            <text class="home-pet-birthday">2018-01-01</text>
+                            <image class="home-pet-birthday-weight"></image>
+                            <text class="home-pet-weight">2018kg\n</text>
+                        </view>
+                        <!--被收藏 点赞-->
+                        <view class="home-pet-detail-weight fr">
+                            <image class="home-pet-birthday-image"></image>
+                            <text class="home-pet-birthday">2018-01-01</text>
+                            <image class="home-pet-birthday-weight"></image>
+                            <text class="home-pet-weight">2018kg\n</text>
+                        </view>
+                        <!--粉丝数 打赏数量-->
+                        <view class="home-pet-detail-weight fr">
+                            <image class="home-pet-birthday-image"></image>
+                            <text class="home-pet-birthday">2018-01-01</text>
+                            <image class="home-pet-birthday-weight"></image>
+                            <text class="home-pet-weight">2018kg\n</text>
+                        </view>
                     </view>
+                    <!--增加宠物-->
                     <view class="home-pet-add">
                     </view>
                 </view>
 
-                <view >
-                    <image src="http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png"></image>
 
-                    <view>
-                        <image src="{{ userInfo.avatarUrl }}"></image>
-                        <image src="http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png"></image>
+            </scroll-view>
+        </swiper-item>
+
+        <!--朋友家-->
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
+                         lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
+                <view class="friend-pet">
+                    <view class="friend-pet-info" >
+                        <!--左边：头像，卡号-->
+                        <view class="friend-pet-avatar fl" >
+                            <image src="{{ userInfo.avatarUrl }}"></image>
+                            <view class="friend-pet-number">
+                                <text>99999999</text>
+                            </view>
+                        </view>
+                        <!--姓名 类别，性别 -->
+                        <view class="friend-pet-detail-name fr">
+                            <image class="friend-pet-type" src="{{ userInfo.avatarUrl }}"></image>
+                            <image class="friend-pet-gender">已绝育</image>
+                            <text class="friend-pet-name">肥仔肥仔肥仔肥仔肥仔</text>
+                        </view>
+                        <!--年龄 体重-->
+                        <view class="friend-pet-detail-weight fr">
+                            <image class="friend-pet-birthday-image"></image>
+                            <text class="friend-pet-birthday">2018-01-01</text>
+                            <image class="friend-pet-birthday-weight"></image>
+                            <text class="friend-pet-weight">2018kg\n</text>
+                        </view>
+                        <!--被收藏 点赞-->
+                        <view class="friend-pet-detail-weight fr">
+                            <image class="friend-pet-birthday-image"></image>
+                            <text class="friend-pet-birthday">2018-01-01</text>
+                            <image class="friend-pet-birthday-weight"></image>
+                            <text class="friend-pet-weight">2018kg\n</text>
+                        </view>
+                    </view>
+                    <view class="friend-pet-info" >
+                        <!--左边：头像，卡号-->
+                        <view class="friend-pet-avatar fl" >
+                            <image src="{{ userInfo.avatarUrl }}"></image>
+                            <view class="friend-pet-number">
+                                <text>99999999</text>
+                            </view>
+                        </view>
+                        <!--姓名 类别，性别 -->
+                        <view class="friend-pet-detail-name fr">
+                            <image class="friend-pet-type" src="{{ userInfo.avatarUrl }}"></image>
+                            <image class="friend-pet-gender">已绝育</image>
+                            <text class="friend-pet-name">肥仔肥仔肥仔肥仔肥仔</text>
+                        </view>
+                        <!--年龄 体重-->
+                        <view class="friend-pet-detail-weight fr">
+                            <image class="friend-pet-birthday-image"></image>
+                            <text class="friend-pet-birthday">2018-01-01</text>
+                            <image class="friend-pet-birthday-weight"></image>
+                            <text class="friend-pet-weight">2018kg\n</text>
+                        </view>
+                        <!--被收藏 点赞-->
+                        <view class="friend-pet-detail-weight fr">
+                            <image class="friend-pet-birthday-image"></image>
+                            <text class="friend-pet-birthday">2018-01-01</text>
+                            <image class="friend-pet-birthday-weight"></image>
+                            <text class="friend-pet-weight">2018kg\n</text>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
+                         lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
+
+                <view class="praise">
+                    <view  class="praise-list">
+                        <view class="praise-row">
+                            <view class="praise-item">
+                                <image class="main-image" mode="aspectFill" src="{{ userInfo.avatarUrl }}"></image>
+                                <view class="praise-item-detail">
+                                    <image class="praise-pet-avatar-image" src="{{ userInfo.avatarUrl }}"></image>
+                                    <text class="praise-pet-avatar-nickname">111</text>
+                                </view>
+                            </view>
+
+                            <view class="praise-item">
+                                <image class="main-image" mode="aspectFill" src="{{ userInfo.avatarUrl }}"></image>
+                                <view class="praise-item-detail">
+                                    <image class="praise-pet-avatar-image" src="{{ userInfo.avatarUrl }}"></image>
+                                    <text class="praise-pet-avatar-nickname">111</text>
+                                </view>
+                            </view>
+                            <view class="praise-item">
+                                <image class="main-image" mode="aspectFill" src="{{ userInfo.avatarUrl }}"></image>
+                                <view class="praise-item-detail">
+                                    <image class="praise-pet-avatar-image" src="{{ userInfo.avatarUrl }}"></image>
+                                    <text class="praise-pet-avatar-nickname">111</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="praise-row">
+                            <view class="praise-item">
+                                <image class="main-image" mode="aspectFill" src="{{ userInfo.avatarUrl }}"></image>
+                                <view class="praise-item-detail">
+                                    <image class="praise-pet-avatar-image" src="{{ userInfo.avatarUrl }}"></image>
+                                    <text class="praise-pet-avatar-nickname">111</text>
+                                </view>
+                            </view>
+                            <view class="praise-item">
+                                <image class="main-image" mode="aspectFill" src="{{ userInfo.avatarUrl }}"></image>
+                                <view class="praise-item-detail">
+                                    <image class="praise-pet-avatar-image" src="{{ userInfo.avatarUrl }}"></image>
+                                    <text class="praise-pet-avatar-nickname">111</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
+                         lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
+                <view class="reward">
+                    <view  class="reward-list">
+                        <view class="reward-row">
+                            <view class="reward-item">
+                                <image class="main-image" mode="aspectFill" src="{{ userInfo.avatarUrl }}"></image>
+                                <view class="reward-item-detail">
+                                    <image class="reward-pet-avatar-image" src="{{ userInfo.avatarUrl }}"></image>
+                                    <text class="reward-pet-avatar-nickname">111</text>
+                                </view>
+                            </view>
+                            <view class="reward-item">
+                                <image class="main-image" mode="aspectFill" src="{{ userInfo.avatarUrl }}"></image>
+                                <view class="reward-item-detail">
+                                    <image class="reward-pet-avatar-image" src="{{ userInfo.avatarUrl }}"></image>
+                                    <text class="reward-pet-avatar-nickname">111</text>
+                                </view>
+                            </view>
+                            <view class="reward-item">
+                                <image class="main-image" mode="aspectFill" src="{{ userInfo.avatarUrl }}"></image>
+                                <view class="reward-item-detail">
+                                    <image class="reward-pet-avatar-image" src="{{ userInfo.avatarUrl }}"></image>
+                                    <text class="reward-pet-avatar-nickname">111</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="reward-row">
+                            <view class="reward-item">
+                                <image class="main-image" mode="aspectFill" src="{{ userInfo.avatarUrl }}"></image>
+                                <view class="reward-item-detail">
+                                    <image class="reward-pet-avatar-image" src="{{ userInfo.avatarUrl }}"></image>
+                                    <text class="reward-pet-avatar-nickname">111</text>
+                                </view>
+                            </view>
+                            <view class="reward-item">
+                                <image class="main-image" mode="aspectFill" src="{{ userInfo.avatarUrl }}"></image>
+                                <view class="reward-item-detail">
+                                    <image class="reward-pet-avatar-image" src="{{ userInfo.avatarUrl }}"></image>
+                                    <text class="reward-pet-avatar-nickname">111</text>
+                                </view>
+                            </view>
+                        </view>
                     </view>
                 </view>
 
-
-
-            </scroll-view>
-        </swiper-item>
-
-        <swiper-item>
-            <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
-                         lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
-                <view>自己家22</view>
-            </scroll-view>
-        </swiper-item>
-
-        <swiper-item>
-            <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
-                         lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
-                <view>自己家33</view>
-            </scroll-view>
-        </swiper-item>
-
-        <swiper-item>
-            <scroll-view scroll-y="true" class="scroll-view-y" scroll-with-animation="true" scroll-top="{{scrollTop}}"
-                         lower-threshold="50" bindscrolltolower="scrolltolower" style="height: {{windowHeight-36}}px;">
-                <view>自己家44</view>
             </scroll-view>
         </swiper-item>
 
