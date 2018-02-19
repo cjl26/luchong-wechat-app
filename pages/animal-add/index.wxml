@@ -13,8 +13,6 @@
 -->
 
 <view class="container">
-
-
     <view class="info-input">
         <view class="info-input-first fl">
             <input class="info-input-name" name="userName" placeholder="名字" bindinput="userNameInput"/>
@@ -36,7 +34,13 @@
         </view>
 
         <view class="info-input-avatar fr">
-            <image src="{{ userInfo.avatarUrl }}"></image>
+            <block wx:if="{{animal_avatar}}">
+                <image bindtap="avatarTap" src="{{animal_avatar}}"></image>
+            </block>
+            <block wx:else>
+                <image bindtap="avatarTap"
+                       src="http://hicatcitycardimage.6so2o.com/wxappimage/person_center_bg.png"></image>
+            </block>
         </view>
     </view>
 
@@ -44,11 +48,12 @@
         <input class="info-input-name" name="userName" placeholder="生日" bindinput="userNameInput"/>
         <input class="info-input-name" name="userName" placeholder="体重" bindinput="userNameInput"/>
         <input class="info-input-name" name="userName" placeholder="签名" bindinput="userNameInput"/>
-
     </view>
 
     <view class="info-input-third">
-        <button>确认</button>
+        <navigator url="/pages/avatarUpload/index/index">
+            <button>确认</button>
+        </navigator>
         <text>注意：请输入正确信息\n如有举报可能会删除这只萌宠</text>
     </view>
 

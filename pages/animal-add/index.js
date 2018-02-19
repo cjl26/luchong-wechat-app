@@ -3,13 +3,15 @@ var that;
 
 // pages/group/index.js
 var app = getApp();
+var previewUrl = "";
 Page({
-    data:{
-        currentTab:0,
-        scrollTop:0,
-        page:0,
-        groupData:[],
-        loading:true
+    data: {
+        currentTab: 0,
+        scrollTop: 0,
+        page: 0,
+        groupData: [],
+        loading: true,
+        animal_avatar : null
     },
     onLoad: function (options) {
         var systemInfo = wx.getSystemInfoSync()
@@ -17,12 +19,12 @@ Page({
             windowHeight: systemInfo.windowHeight
         })
     },
-    onShow:function(){
+    onShow: function () {
         this.setCurrentData()
     },
 
-    setCurrentData:function(){
-        if(!this.data.loading){
+    setCurrentData: function () {
+        if (!this.data.loading) {
             return false
         }
 
@@ -34,43 +36,36 @@ Page({
     },
 
 
-    showGoodsDetail:function(e){
-        var id = e.currentTarget.dataset.id;
-        if(!id) return ;
-        app.redirect('goods/detail',"gid="+id)
-    },
-    showGroupInfo:function(e){
-        var id = e.currentTarget.dataset.id;
-        app.redirect('group/detail',"id="+id)
-    },
-    showOrderInfo:function(e){
-        var id = e.currentTarget.dataset.id;
-        app.redirect('orders/detail',"oid="+id)
 
-    },
     // 滑动切换tab
-    bindChange: function( e ) {
-        this.data.page = 0
-        this.data.groupData=[]
-        this.data.loading = true
-        this.data.currentTab = e.detail.current
-        this.setCurrentData()
-        this.setData({
-            loading:true,
-            groupList:[],
-            currentTab: this.data.currentTab
+    avatarTap: function () {
+        console.log("avatarTap");
+        var that = this
+        wx.chooseImage({
+            count: 1, // 默认9
+            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            success: function (res) {
+                // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+                var tempFilePaths = res.tempFilePaths[0];
+                previewUrl = tempFilePaths;
+                const animal_avatar = tempFilePaths;
+                console.log("tempFilePaths = " + tempFilePaths);
+                that.setData({
+                    animal_avatar: tempFilePaths
+                })
+                console.log("url = " + `/pages/animal-add/upload/upload?src=${animal_avatar}`)
+
+                wx.navigateTo({
+                    url: `/pages/animal-add/upload/upload?src=${animal_avatar}`
+                })
+                //that.preview();
+            },
+            fail: function () {
+            }
         })
-    },
-    // 点击tab切换
-    swichNav: function( e ) {
-        if( this.data.currentTab == e.currentTarget.dataset.current ) return;
-        this.data.currentTab = e.currentTarget.dataset.current
-        this.setData({
-            currentTab: this.data.currentTab
-        })
-    },
-    scrolltolower:function(){
-        ++this.data.page
-        this.setCurrentData()
+
     }
+
+
 })

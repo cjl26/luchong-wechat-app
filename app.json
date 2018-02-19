@@ -5,16 +5,20 @@
   },
   "pages": [
     "pages/index/index",
+    "pages/animal/index",
+    "pages/animal-add/index",
+    "pages/animal-add/upload/upload",
     "pages/card-detail/index",
     "pages/card-list/index",
     "pages/person-card-list/index",
     "pages/merchant-list/index",
     "pages/merchant-detail/index",
     "pages/person-center/index",
-    "pages/transaction-list/transaction-list",
-    "pages/animal/index",
-    "pages/animal-add/index",
-    "pages/user-check-in-list/index"
+    "pages/user-check-in-list/index",
+    "pages/avatarUpload/upload/upload",
+    "pages/avatarUpload/index/index",
+    "pages/transaction-list/transaction-list"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

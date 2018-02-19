@@ -1,0 +1,22 @@
+@import "../../style/common.wxss";
+
+/*
+style="width:{{width}}px;height:{{height}}px;background-color: rgba(0, 0, 0, 0.8)"
+    width:750rpx;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.8);
+*/
+.cropper{
+    top: 0;
+    left: 0;
+
+}
+
+/*
+    background-color: rgba(0, 0, 0, 0.95);
+*/
+.cropper-buttons{
+    width: 100%;
+    color: #04b00f;
+    margin-top: 10rpx;
+}
