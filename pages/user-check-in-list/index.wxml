@@ -9,15 +9,13 @@
             </view>
         </view>
         <view class="item-content">
-            <navigator url="/pages/user-check-in-list/index">
-                <view class="item-content-tab">
-                    <image class="item-content-tab-icon" src="/images/luchong/person-item1.png">
-                    </image>
-                    <view class="item-content-tab-text">
-                        签到记录
-                    </view>
+            <view class="item-content-tab" bindtap="toBuyCardRecordTap" data-pagetype="2">
+                <image class="item-content-tab-icon" src="/images/luchong/person-item1.png">
+                </image>
+                <view class="item-content-tab-text">
+                    签到记录
                 </view>
-            </navigator>
+            </view>
             <view class="item-content-tab" bindtap="toUserCardRecordTap" >
                 <image class="item-content-tab-icon" src="/images/luchong/person-item2.png">
                 </image>

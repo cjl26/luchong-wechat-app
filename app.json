@@ -12,7 +12,9 @@
     "pages/merchant-detail/index",
     "pages/person-center/index",
     "pages/transaction-list/transaction-list",
-    "pages/animal/index"
+    "pages/animal/index",
+    "pages/animal-add/index",
+    "pages/user-check-in-list/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,131 @@
+/********** 公共样式 **********/
+
+.fl {
+    float: left;
+}
+
+.fc {
+    float: center;
+}
+
+.fr {
+    float: right;
+}
+
+.container {
+    background-color: #f9f4f4;
+    width: 96%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.info-input {
+    height: 260rpx;
+    margin-top: 50rpx;
+}
+
+.info-input-first {
+    width: 60%;
+    height: 250rpx;
+}
+
+/*姓名输入*/
+.info-input-name{
+    margin: 5rpx;
+    height: 80rpx;
+}
+
+/*类别输入*/
+.info-input-type {
+    margin: 5rpx;
+    flex-direction: row;
+    display: flex;
+    height: 60rpx;
+}
+
+.info-input-type text {
+    font-size: 35rpx;
+}
+
+.info-input-type button {
+    font-size: 25rpx;
+    color: black;
+    background-color: lightgreen;
+    width: 100rpx;
+    height: 50rpx;
+}
+
+/*性别*/
+.info-input-gender {
+    margin: 5rpx;
+    flex-direction: row;
+    display: flex;
+    height: 60rpx;
+}
+
+.info-input-gender text {
+    font-size: 35rpx;
+}
+
+.info-input-gender button {
+    font-size: 25rpx;
+    color: black;
+    background-color: lightgreen;
+    width: 100rpx;
+    height: 50rpx;
+}
+
+/*绝育*/
+.info-input-sterilization {
+    margin: 5rpx;
+    flex-direction: row;
+    display: flex;
+    height: 60rpx;
+}
+
+.info-input-sterilization text {
+    font-size: 35rpx;
+}
+
+.info-input-sterilization button {
+    font-size: 25rpx;
+    color: black;
+    background-color: lightgreen;
+    width: 100rpx;
+    height: 50rpx;
+}
+
+/*头像*/
+.info-input-avatar {
+    width: 40%;
+    height: 250rpx;
+}
+
+.info-input-avatar image {
+    margin-left: 20rpx;
+    width: 250rpx;
+    height: 250rpx;
+    border-radius: 50%;
+}
+
+
+.info-input-second {
+    width: 100%;
+}
+
+.info-input-third{
+    margin-top: 100rpx;
+    width: 100%;
+    alignment: center;
+    text-align: center;
+}
+
+/*
+.info-input button{
+    color: black;
+    background-color: lightgreen;
+    width: 100rpx;
+    height: 50rpx;
+}
+*/
+

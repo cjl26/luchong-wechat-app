@@ -105,7 +105,7 @@ Page({
         this.apiBannerQuery()
         this.apiQaQuery()
         getApp().getUserOpedId(function () {
-
+            that.apiUserCheckIn()
         })
     },
 
@@ -121,15 +121,16 @@ Page({
                         wx.navigateBack({
                             delta: 1
                         })
-                    } else if (res.cancel) {
-                        wx.openSetting({
-                            complete: (res) => {
-                                wx.reLaunch({
-                                    url: '/pages/index/index',
-                                })
-                            }
-                        })
                     }
+                    // } else if (res.cancel) {
+                    //     wx.openSetting({
+                    //         complete: (res) => {
+                    //             wx.reLaunch({
+                    //                 url: '/pages/index/index',
+                    //             })
+                    //         }
+                    //     })
+                    // }
                 }
             })
             return
@@ -184,7 +185,7 @@ Page({
                 that.setData({
                     banners: data.ads
                 });
-                that.loadMore()
+                //that.loadMore()
 
             }, onError: function (msgCanShow, code, hiddenMsg) {
                 netUtil.hideLoadingDialog(that);
@@ -213,11 +214,36 @@ Page({
                 that.setData({
                     qaList: data.qasList
                 });
-                that.loadMore()
+                //that.loadMore()
 
             }, onError: function (msgCanShow, code, hiddenMsg) {
                 netUtil.hideLoadingDialog(that);
                 netUtil.showAlertDialog("提示", msgCanShow, false, "确定", null, null);
+
+            }
+        }).send()
+    },
+
+    /**
+     * 用户签到
+     */
+    apiUserCheckIn: function () {
+        console.log("apiUserCheckIn ")
+        var params = {
+            service: 'luchong.user.checkin'
+        }
+        netUtil.buildRequest(that, '/luchong/api', params, {
+            onPre: function () {
+                console.log("page:" + that.data.page);
+                netUtil.showLoadingDialog(that);
+            },
+            onSuccess: function (data) {
+                netUtil.hideLoadingDialog(that);
+                netUtil.showAlertDialog("提示", data.error_message, false, "确定", null, null);
+
+            }, onError: function (msgCanShow, code, hiddenMsg) {
+                netUtil.hideLoadingDialog(that);
+                //netUtil.showAlertDialog("提示", msgCanShow, false, "确定", null, null);
 
             }
         }).send()

@@ -133,8 +133,10 @@
                         </view>
                     </view>
                     <!--增加宠物-->
-                    <view class="home-pet-add">
-                    </view>
+                    <navigator url="/pages/animal-add/index">
+                        <view class="home-pet-add">
+                        </view>
+                    </navigator>
                 </view>
 
 

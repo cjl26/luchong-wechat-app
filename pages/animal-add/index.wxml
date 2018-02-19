@@ -1,0 +1,56 @@
+<!--
+1. 姓名
+2. 类别
+3. 性别
+4. 绝育
+
+==头像==
+
+5. 生日
+6. 体重
+7. 签名
+
+-->
+
+<view class="container">
+
+
+    <view class="info-input">
+        <view class="info-input-first fl">
+            <input class="info-input-name" name="userName" placeholder="名字" bindinput="userNameInput"/>
+            <view class="info-input-type">
+                <text>类别：</text>
+                <button>猫</button>
+                <button>狗</button>
+            </view>
+            <view class="info-input-gender">
+                <text>性别：</text>
+                <button>男</button>
+                <button>女</button>
+            </view>
+            <view class="info-input-sterilization">
+                <text>绝育：</text>
+                <button>是</button>
+                <button>否</button>
+            </view>
+        </view>
+
+        <view class="info-input-avatar fr">
+            <image src="{{ userInfo.avatarUrl }}"></image>
+        </view>
+    </view>
+
+    <view class="info-input-second">
+        <input class="info-input-name" name="userName" placeholder="生日" bindinput="userNameInput"/>
+        <input class="info-input-name" name="userName" placeholder="体重" bindinput="userNameInput"/>
+        <input class="info-input-name" name="userName" placeholder="签名" bindinput="userNameInput"/>
+
+    </view>
+
+    <view class="info-input-third">
+        <button>确认</button>
+        <text>注意：请输入正确信息\n如有举报可能会删除这只萌宠</text>
+    </view>
+
+
+</view>
