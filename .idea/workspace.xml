@@ -326,7 +326,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518275206413</updated>
-      <workItem from="1518275209564" duration="100635000" />
+      <workItem from="1518275209564" duration="100641000" />
     </task>
     <task id="LOCAL-00001" summary="update tab-2">
       <created>1518364676839</created>
@@ -447,11 +447,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519123646492</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="update pet info page">
+      <created>1519123656259</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1519123656259</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100635000" />
+    <option name="totallyTimeSpent" value="100641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="23" width="1299" height="657" extended-state="0" />
