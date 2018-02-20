@@ -1,4 +1,5 @@
-var netUtil = require('/../../utils/netUtil.js')
+var timeUtil = require('/../../utils/TimeUtil.js')
+var inputValidateUtil = require('/../../utils/InputValidateUtil.js')
 var that;
 
 // pages/group/index.js
@@ -25,7 +26,7 @@ Page({
         var systemInfo = wx.getSystemInfoSync()
         this.setData({
             windowHeight: systemInfo.windowHeight,
-            today: this.getNowFormatDate()
+            today: timeUtil.getNowFormatDate()
         })
     },
     onShow: function () {
@@ -79,7 +80,7 @@ Page({
      * 姓名输入
      */
     nameInput: function (e) {
-        var isTooLong = this.lengthChecker(e.detail, 16);
+        var isTooLong = inputValidateUtil.lengthChecker(e.detail, 16);
         this.setData({
             nickName: e.detail.value
         })
@@ -99,7 +100,7 @@ Page({
      */
     weightInput: function (e) {
 
-        var floatNumberChecker = this.floatNumberChecker(e.detail.value);
+        var floatNumberChecker = inputValidateUtil.floatNumberChecker(e.detail.value);
         console.log("floatNumberChecker = " + floatNumberChecker);
         if (!floatNumberChecker) {
             //console.log("substr = " + e.detail.value.substr(0, e.detail.value.length - 1))
@@ -121,7 +122,7 @@ Page({
             return;
         }
 
-        var isTooLong = this.lengthChecker(e.detail, 10);
+        var isTooLong = inputValidateUtil.lengthChecker(e.detail, 10);
 
         this.setData({
             weight: e.detail.value
@@ -141,7 +142,7 @@ Page({
      * 签名输入
      */
     signatureInput: function (e) {
-        var isTooLong = this.lengthChecker(e.detail, 64);
+        var isTooLong = inputValidateUtil.lengthChecker(e.detail, 64);
         this.setData({
             signature: e.detail.value
         })
@@ -189,24 +190,40 @@ Page({
         //console.log("e = " + JSON.stringify(e));
     },
 
+    /**
+     * 男
+     * @param e
+     */
     maleGender: function (e) {
         this.setData({
             gender: '1'
         })
     },
 
+    /**
+     * 女
+     * @param e
+     */
     femaGender: function (e) {
         this.setData({
             gender: '2'
         })
     },
 
+    /**
+     * 已经绝育
+     * @param e
+     */
     isSterilization: function (e) {
         this.setData({
             sterilization: '1'
         })
     },
 
+    /**
+     * 未绝育
+     * @param e
+     */
     notSterilization: function (e) {
         this.setData({
             sterilization: '2'
@@ -218,117 +235,6 @@ Page({
      */
     confirmTap: function () {
       console.log("confirmTap");
-    },
-
-
-    /**
-     * 放到util中
-     * @returns {string}
-     */
-    getNowFormatDate: function () {
-        var date = new Date();
-        var seperator1 = "-";
-        var year = date.getFullYear();
-        var month = date.getMonth() + 1;
-        var strDate = date.getDate();
-        if (month >= 1 && month <= 9) {
-            month = "0" + month;
-        }
-        if (strDate >= 0 && strDate <= 9) {
-            strDate = "0" + strDate;
-        }
-        var currentdate = year + seperator1 + month + seperator1 + strDate;
-        return currentdate;
-    },
-
-    /**
-     * 检查长度 - 放到 util中
-     * @param stringInput
-     * @param maxLen
-     * @returns {boolean}
-     */
-    lengthChecker: function (stringInput, maxLen) {
-        var w = 0;
-        var tempCount = 0;
-        //length 获取字数数，不区分汉子和英文
-        for (var i = 0; i < stringInput.value.length; i++) {
-            //charCodeAt()获取字符串中某一个字符的编码
-            var c = stringInput.value.charCodeAt(i);
-            //单字节加1
-            if ((c >= 0x0001 && c <= 0x007e) || (0xff60 <= c && c <= 0xff9f)) {
-                w++;
-            } else {
-                w += 2;
-            }
-            if (w > maxLen) {
-                stringInput.value = stringInput.value.substr(0, i);
-                return true;
-                break;
-            }
-        }
-        return false;
-    },
-
-    /**
-     * https://www.cnblogs.com/maxm/p/6743989.html
-     * 判断是否浮点数
-     * @param valueInput
-     * @returns {boolean}
-     */
-    floatNumberChecker: function (valueInput) {
-        if (valueInput == '') {
-            return false;
-        }
-        valueInput = this.valueTrim(valueInput);
-
-        if (this.numberChecker(valueInput)) {
-            return true;
-        }
-        if (valueInput.length >= 2) {
-            //console.log("valueInput.indexOf(\".\") = " + valueInput.indexOf("."));
-            //console.log("valueInput.length = " + valueInput.length);
-
-            if (valueInput.substr(0, 1) == "0") {
-                if (valueInput.substr(0, 2) != "0.") {
-                    return false;
-                }
-                else {
-                    if (valueInput.length == 2) {
-                        return true;
-                    }
-                }
-            } else if (valueInput.indexOf(".") == valueInput.length - 1) {
-                //当前输入的的小数点
-                return true;
-            }
-        }
-        var reg = /^\d+(\.\d+)?$/;
-        return reg.test(valueInput);
-    },
-
-    /**
-     * 判断是否数字
-     * @param numberValue
-     * @returns {boolean}
-     */
-    numberChecker: function (numberValue) {
-        //定义正则表达式部分
-        var reg1 = /^[0-9]{0,}$/;
-        var reg2 = /^[1-9]{1}[0-9]{0,}$/;
-        //alert(numberValue);
-        if (numberValue == null || numberValue.length == 0) {
-            return false;
-        }
-        numberValue = this.valueTrim(numberValue);
-        //判断当数字只有1位时
-        if (numberValue.length < 2) {
-            return reg1.test(numberValue);
-        }
-        return reg2.test(numberValue);
-    },
-
-    valueTrim: function (stringInput) {
-        return stringInput.replace(/(^\s*)|(\s*$)/g, "");
     }
 
 })
