@@ -37,8 +37,6 @@ Page({
         console.log("avatar = " + avatar);
         //上传图片
 
-
-
         //  获取到裁剪后的图片
         //wx.redirectTo({
           //url: `../index/index?avatar=${avatar}`

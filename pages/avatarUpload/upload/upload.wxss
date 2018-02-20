@@ -1,4 +1,4 @@
-@import "../../style/common.wxss";
+@import "../../../common/style/common.wxss";
 
 .cropper{
     top: 0;
