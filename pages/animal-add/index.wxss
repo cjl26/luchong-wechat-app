@@ -12,32 +12,40 @@
     float: right;
 }
 
-.container {
+/*
     background-color: #f9f4f4;
+
+*/
+.container {
     width: 96%;
     margin-right: 2%;
     margin-left: 2%;
 }
 
 .info-input {
-    height: 260rpx;
+    height: 360rpx;
     margin-top: 50rpx;
 }
 
 .info-input-first {
     width: 60%;
-    height: 250rpx;
+    height: 350rpx;
 }
 
-/*姓名输入*/
+/*姓名输入
+*/
 .info-input-name{
     margin: 5rpx;
-    height: 80rpx;
+    height: 70rpx;
+    font-size: 40rpx;
+    border-bottom: 1px solid #c8cccf;
+
 }
 
 /*类别输入*/
 .info-input-type {
     margin: 5rpx;
+    margin-top: 20rpx;
     flex-direction: row;
     display: flex;
     height: 60rpx;
@@ -47,13 +55,6 @@
     font-size: 35rpx;
 }
 
-.info-input-type button {
-    font-size: 25rpx;
-    color: black;
-    background-color: lightgreen;
-    width: 100rpx;
-    height: 50rpx;
-}
 
 /*性别*/
 .info-input-gender {
@@ -67,13 +68,6 @@
     font-size: 35rpx;
 }
 
-.info-input-gender button {
-    font-size: 25rpx;
-    color: black;
-    background-color: lightgreen;
-    width: 100rpx;
-    height: 50rpx;
-}
 
 /*绝育*/
 .info-input-sterilization {
@@ -87,7 +81,10 @@
     font-size: 35rpx;
 }
 
-.info-input-sterilization button {
+/*
+    按钮选择
+*/
+.info-input-normal-button {
     font-size: 25rpx;
     color: black;
     background-color: lightgreen;
@@ -95,10 +92,20 @@
     height: 50rpx;
 }
 
+.info-input-select-button {
+    font-size: 25rpx;
+    color: white;
+    background-color: red;
+    width: 100rpx;
+    height: 50rpx;
+}
+
+
+
 /*头像*/
 .info-input-avatar {
     width: 40%;
-    height: 250rpx;
+    height: 350rpx;
 }
 
 .info-input-avatar image {
@@ -110,7 +117,35 @@
 
 
 .info-input-second {
+    margin-top: 30rpx;
     width: 100%;
+    height: 250rpx;
+}
+
+.info-input-birthday{
+    margin: 5rpx;
+    flex-direction: row;
+    display: flex;
+    height: 60rpx;
+}
+
+.info-input-birthday text {
+    font-size: 35rpx;
+}
+
+.info-input-weight{
+    margin: 5rpx;
+    width: 45%;
+    height: 70rpx;
+    font-size: 35rpx;
+    border-bottom: 1px solid #c8cccf;
+}
+
+.info-input-signature{
+    margin: 5rpx;
+    height: 70rpx;
+    font-size: 35rpx;
+    border-bottom: 1px solid #c8cccf;
 }
 
 .info-input-third{
@@ -118,6 +153,17 @@
     width: 100%;
     alignment: center;
     text-align: center;
+}
+
+.info-input-confirm{
+    width: 500rpx;
+    height: 100rpx;
+    margin-bottom: 50rpx;
+}
+
+.info-input-warning{
+    color: red;
+    font-size: 30rpx;
 }
 
 /*

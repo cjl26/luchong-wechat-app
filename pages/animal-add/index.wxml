@@ -15,22 +15,32 @@
 <view class="container">
     <view class="info-input">
         <view class="info-input-first fl">
-            <input class="info-input-name" name="userName" placeholder="名字" bindinput="userNameInput"/>
+            <input class="info-input-name" value="{{nickName}}" name="nameInput" placeholder="萌宠的名字" bindinput="nameInput"/>
             <view class="info-input-type">
                 <text>类别：</text>
-                <button>猫</button>
-                <button>狗</button>
+                <button class="{{type == '1' ? 'info-input-select-button' : 'info-input-normal-button'}}" bindtap="catType">猫</button>
+                <button class="{{type == '2' ? 'info-input-select-button' : 'info-input-normal-button'}}" bindtap="dogType">狗</button>
             </view>
             <view class="info-input-gender">
                 <text>性别：</text>
-                <button>男</button>
-                <button>女</button>
+                <button class="{{gender == '1' ? 'info-input-select-button' : 'info-input-normal-button'}}" bindtap="maleGender">男</button>
+                <button class="{{gender == '2' ? 'info-input-select-button' : 'info-input-normal-button'}}" bindtap="femaGender">女</button>
             </view>
             <view class="info-input-sterilization">
                 <text>绝育：</text>
-                <button>是</button>
-                <button>否</button>
+                <button class="{{sterilization == '1' ? 'info-input-select-button' : 'info-input-normal-button'}}" bindtap="isSterilization">是</button>
+                <button class="{{sterilization == '2' ? 'info-input-select-button' : 'info-input-normal-button'}}" bindtap="notSterilization">否</button>
             </view>
+            <picker mode="date" end="{{today}}" bindchange="bindBirthDayChange">
+                <view class="info-input-birthday">
+                    <block wx:if="{{birthday}}">
+                        <text>日期: {{birthday}}</text>
+                    </block>
+                    <block wx:else>
+                        <text>日期: 请选择日期</text>
+                    </block>
+                </view>
+            </picker>
         </view>
 
         <view class="info-input-avatar fr">
@@ -45,14 +55,13 @@
     </view>
 
     <view class="info-input-second">
-        <input class="info-input-name" name="userName" placeholder="生日" bindinput="userNameInput"/>
-        <input class="info-input-name" name="userName" placeholder="体重" bindinput="userNameInput"/>
-        <input class="info-input-name" name="userName" placeholder="签名" bindinput="userNameInput"/>
+        <input class="info-input-weight" value="{{weight}}" type="digit" name="weightInput" placeholder="体重(kg)" bindinput="weightInput"/>
+        <input class="info-input-signature" value="{{signature}}" name="signatureInput" placeholder="签名" bindinput="signatureInput"/>
     </view>
 
     <view class="info-input-third">
-        <button>确认</button>
-        <text>注意：请输入正确信息\n如有举报可能会删除这只萌宠</text>
+        <button class="info-input-confirm" bindtap="confirmTap">确认</button>
+        <text class="info-input-warning">注意：请输入正确信息\n如有举报可能会删除这只萌宠</text>
     </view>
 
 
