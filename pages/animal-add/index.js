@@ -54,10 +54,10 @@ Page({
                 that.setData({
                     animal_avatar: tempFilePaths
                 })
-                console.log("url = " + `/pages/animal-add/upload/upload?src=${animal_avatar}`)
+                console.log("url = " + `/pages/animal-add/upload?src=${animal_avatar}`)
 
                 wx.navigateTo({
-                    url: `/pages/animal-add/upload/upload?src=${animal_avatar}`
+                    url: `/pages/animal-add/upload?src=${animal_avatar}`
                 })
                 //that.preview();
             },

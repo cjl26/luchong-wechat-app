@@ -7,7 +7,7 @@
     "pages/index/index",
     "pages/animal/index",
     "pages/animal-add/index",
-    "pages/animal-add/upload/upload",
+    "pages/animal-add/upload",
     "pages/card-detail/index",
     "pages/card-list/index",
     "pages/person-card-list/index",

@@ -1,4 +1,4 @@
-import WeCropper from '../../we-cropper/we-cropper.js'
+import WeCropper from '../../common/we-cropper/we-cropper.js'
 
 const device = wx.getSystemInfoSync()
 const width = device.windowWidth
