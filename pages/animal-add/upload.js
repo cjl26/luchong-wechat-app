@@ -1,8 +1,12 @@
 import WeCropper from '../../common/we-cropper/we-cropper.js'
 
+const uploadImage = require('../../common/aliyun-oss/uploadAliyun.js');
+
+var netUtil = require('/../../utils/netUtil.js')
 const device = wx.getSystemInfoSync()
 const width = device.windowWidth
 const height = device.windowHeight - 50
+var app = getApp();
 
 Page({
   data: {
@@ -34,13 +38,28 @@ Page({
   getCropperImage () {
     this.wecropper.getCropperImage((avatar) => {
       if (avatar) {
-        console.log("avatar = " + avatar);
-        //上传图片
+        //console.log("avatar = " + avatar);
+        var fileName = app.globalData.openid + "_" + new Date().getTime() + "_" + Math.ceil(Math.random()*100) + ".png";
+        //console.log("fileName = " + fileName);
 
-        //  获取到裁剪后的图片
-        //wx.redirectTo({
-          //url: `../index/index?avatar=${avatar}`
-        //})
+          netUtil.showLoadingDialog();
+        //上传图片
+          uploadImage(
+              {
+                  filePath: avatar,
+                  dir: "picture/",
+                  fileName : fileName,
+                  success: function (res) {
+                      netUtil.hideLoadingDialog();
+                      console.log("上传成功 res = " + res);
+                      
+                  },
+                  fail: function (res) {
+                      netUtil.hideLoadingDialog();
+                      netUtil.showAlertDialog("提示 - 上传失败，请重试", res.errMsg, false, "确定", null, null);
+                  }
+              });
+
       } else {
         console.log('获取图片失败，请稍后重试')
       }
