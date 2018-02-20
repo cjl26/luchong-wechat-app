@@ -66,7 +66,7 @@
                 </block>
             </view>
         </block>
-        
+
         <!--猫 宠物名/宠物头像/点赞数/粉丝数 主人名/头像 左滑4张图-->
 
         <view class="skill" id="skill_sec">
