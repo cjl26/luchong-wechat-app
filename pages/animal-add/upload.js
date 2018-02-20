@@ -52,7 +52,15 @@ Page({
                   success: function (res) {
                       netUtil.hideLoadingDialog();
                       console.log("上传成功 res = " + res);
-                      
+
+                      var pages = getCurrentPages();
+                      //var currPage = pages[pages.length - 1];   //当前页面
+                      var prevPage = pages[pages.length - 2];  //上一个页面
+                      prevPage.setData({
+                          animal_avatar: res
+                      })
+                      wx.navigateBack();   //返回上一个页面
+
                   },
                   fail: function (res) {
                       netUtil.hideLoadingDialog();
@@ -61,7 +69,8 @@ Page({
               });
 
       } else {
-        console.log('获取图片失败，请稍后重试')
+        //console.log('获取图片失败，请稍后重试')
+        netUtil.showAlertDialog("提示", "获取图片失败，请稍后重试", false, "确定", null, null);
       }
     })
   },

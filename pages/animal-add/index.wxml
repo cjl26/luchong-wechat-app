@@ -51,9 +51,7 @@
     </view>
 
     <view class="info-input-third">
-        <navigator url="/pages/avatarUpload/index/index">
-            <button>确认</button>
-        </navigator>
+        <button>确认</button>
         <text>注意：请输入正确信息\n如有举报可能会删除这只萌宠</text>
     </view>
 

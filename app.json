@@ -15,8 +15,6 @@
     "pages/merchant-detail/index",
     "pages/person-center/index",
     "pages/user-check-in-list/index",
-    "pages/avatarUpload/upload/upload",
-    "pages/avatarUpload/index/index",
     "pages/transaction-list/transaction-list"
 
   ],

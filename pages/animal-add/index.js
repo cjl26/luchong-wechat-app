@@ -51,9 +51,9 @@ Page({
                 previewUrl = tempFilePaths;
                 const animal_avatar = tempFilePaths;
                 console.log("tempFilePaths = " + tempFilePaths);
-                that.setData({
-                    animal_avatar: tempFilePaths
-                })
+                //that.setData({
+                //    animal_avatar: tempFilePaths
+                //})
                 console.log("url = " + `/pages/animal-add/upload?src=${animal_avatar}`)
 
                 wx.navigateTo({
