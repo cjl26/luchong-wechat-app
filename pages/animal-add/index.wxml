@@ -16,6 +16,16 @@
     <view class="info-input">
         <view class="info-input-first fl">
             <input class="info-input-name" value="{{nickName}}" name="nameInput" placeholder="萌宠的名字" bindinput="nameInput"/>
+            <picker mode="date" end="{{today}}" bindchange="bindBirthDayChange">
+                <view class="info-input-birthday">
+                    <block wx:if="{{birthday}}">
+                        <text>日期: {{birthday}}</text>
+                    </block>
+                    <block wx:else>
+                        <text>日期: 请选择日期</text>
+                    </block>
+                </view>
+            </picker>
             <view class="info-input-type">
                 <text>类别：</text>
                 <button class="{{type == '1' ? 'info-input-select-button' : 'info-input-normal-button'}}" bindtap="catType">猫</button>
@@ -31,16 +41,7 @@
                 <button class="{{sterilization == '1' ? 'info-input-select-button' : 'info-input-normal-button'}}" bindtap="isSterilization">是</button>
                 <button class="{{sterilization == '2' ? 'info-input-select-button' : 'info-input-normal-button'}}" bindtap="notSterilization">否</button>
             </view>
-            <picker mode="date" end="{{today}}" bindchange="bindBirthDayChange">
-                <view class="info-input-birthday">
-                    <block wx:if="{{birthday}}">
-                        <text>日期: {{birthday}}</text>
-                    </block>
-                    <block wx:else>
-                        <text>日期: 请选择日期</text>
-                    </block>
-                </view>
-            </picker>
+
         </view>
 
         <view class="info-input-avatar fr">

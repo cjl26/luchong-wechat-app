@@ -45,7 +45,6 @@
 /*类别输入*/
 .info-input-type {
     margin: 5rpx;
-    margin-top: 20rpx;
     flex-direction: row;
     display: flex;
     height: 60rpx;
@@ -124,6 +123,7 @@
 
 .info-input-birthday{
     margin: 5rpx;
+    margin-top: 20rpx;
     flex-direction: row;
     display: flex;
     height: 60rpx;

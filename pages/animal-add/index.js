@@ -1,4 +1,5 @@
 var timeUtil = require('/../../utils/TimeUtil.js')
+var netUtil = require('/../../utils/netUtil.js')
 var inputValidateUtil = require('/../../utils/InputValidateUtil.js')
 var that;
 
@@ -12,8 +13,8 @@ Page({
         page: 0,
         groupData: [],
         loading: true,
-        animal_avatar: null,
-        birthday: null,
+        animal_avatar: "",
+        birthday: "",
         nickName: "",
         weight: "",
         signature: "",
@@ -174,8 +175,6 @@ Page({
         this.setData({
             type: '1'
         })
-        //console.log("catType");
-        //console.log("e = " + JSON.stringify(e));
     },
 
     /**
@@ -186,8 +185,6 @@ Page({
         this.setData({
             type: '2'
         })
-        //console.log("catType");
-        //console.log("e = " + JSON.stringify(e));
     },
 
     /**
@@ -234,7 +231,61 @@ Page({
      * 确定输入
      */
     confirmTap: function () {
-      console.log("confirmTap");
+        console.log("confirmTap");
+        var params = {
+            service: 'luchong.pet.add',
+            avatar: this.data.animal_avatar,
+            birthday: this.data.birthday,
+            name: this.data.nickName,
+            weight: this.data.weight,
+            signature: this.data.signature,
+            type: this.data.type,
+            gender: this.data.gender,
+            sterilization: this.data.sterilization
+        }
+
+        var paramsEmpty = inputValidateUtil.paramsChecker(params);
+        if (paramsEmpty != '') {
+            var toastString = "";
+            if (paramsEmpty == 'avatar') {
+                toastString = "请选择头像";
+            } else if (paramsEmpty == 'birthday') {
+                toastString = "请选择生日";
+            } else if (paramsEmpty == 'name') {
+                toastString = "请输入名字";
+            } else if (paramsEmpty == 'weight') {
+                toastString = "请输入体重";
+            } else if (paramsEmpty == 'signature') {
+                toastString = "请输入签名";
+            } else if (paramsEmpty == 'type') {
+                toastString = "请选择类型";
+            } else if (paramsEmpty == 'gender') {
+                toastString = "请选择性别";
+            } else if (paramsEmpty == 'sterilization') {
+                toastString = "请选择是否绝育";
+            }
+
+            wx.showToast({
+                title: toastString,
+                duration: 1000,
+                mask: false
+            })
+            return;
+        }
+
+        netUtil.buildRequest(that, '/luchong/api', params, {
+            onPre: function () {
+                netUtil.showLoadingDialog(that);
+            },
+            onSuccess: function (data) {
+                netUtil.hideLoadingDialog(that);
+
+            }, onError: function (msgCanShow, code, hiddenMsg) {
+                netUtil.hideLoadingDialog(that);
+                netUtil.showAlertDialog("提示", msgCanShow, false, "确定", null, null);
+
+            }
+        }).send()
     }
 
 })

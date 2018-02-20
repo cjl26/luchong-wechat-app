@@ -93,9 +93,31 @@ function lengthChecker(stringInput, maxLen) {
     return false;
 }
 
+/**
+ * 判断是否全部参数都已经填上
+ * @param params
+ */
+function paramsChecker(params) {
+    //var returnParams = new Array();
+    for (var key in params) {
+        //console.log(key + ":" + params[key]);
+        var value = params[key];
+        if (value == null || value.length == 0) {
+            //console.log("add key = " + key);
+            return key;
+            //returnParams[key] = value;
+            //console.log("returnParams add = " + JSON.stringify(returnParams))
+        }
+    }
+    return "";
+    //console.log("returnParams = " + JSON.stringify(returnParams))
+    //return returnParams;
+}
+
 module.exports = {
     valueTrim: valueTrim,
     numberChecker: numberChecker,
     floatNumberChecker: floatNumberChecker,
-    lengthChecker : lengthChecker
+    lengthChecker: lengthChecker,
+    paramsChecker: paramsChecker
 }
