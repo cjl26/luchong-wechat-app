@@ -49,7 +49,7 @@ Page({
 
     // 切换头像
     avatarTap: function () {
-        console.log("avatarTap");
+        //console.log("avatarTap");
         var that = this
         wx.chooseImage({
             count: 1, // 默认9
@@ -60,11 +60,11 @@ Page({
                 var tempFilePaths = res.tempFilePaths[0];
                 previewUrl = tempFilePaths;
                 const animal_avatar = tempFilePaths;
-                console.log("tempFilePaths = " + tempFilePaths);
+                //console.log("tempFilePaths = " + tempFilePaths);
                 //that.setData({
                 //    animal_avatar: tempFilePaths
                 //})
-                console.log("url = " + `/pages/animal-add/upload?src=${animal_avatar}`)
+                //console.log("url = " + `/pages/animal-add/upload?src=${animal_avatar}`)
 
                 wx.navigateTo({
                     url: `/pages/animal-add/upload?src=${animal_avatar}`
@@ -88,12 +88,12 @@ Page({
         if (isTooLong) {
             wx.showToast({
                 title: '太长啦',
-                icon: null,
+                image: "/images/luchong/person-item1.png",
                 duration: 500,
                 mask: false
             })
         }
-        console.log("this = " + JSON.stringify(this));
+        //console.log("this = " + JSON.stringify(this));
     },
 
     /**
@@ -102,7 +102,7 @@ Page({
     weightInput: function (e) {
 
         var floatNumberChecker = inputValidateUtil.floatNumberChecker(e.detail.value);
-        console.log("floatNumberChecker = " + floatNumberChecker);
+        //console.log("floatNumberChecker = " + floatNumberChecker);
         if (!floatNumberChecker) {
             //console.log("substr = " + e.detail.value.substr(0, e.detail.value.length - 1))
             //e.detail.value = e.detail.value.substr(0, e.detail.value.length - 1);
@@ -114,7 +114,7 @@ Page({
             if (e.detail.value.length > 0) {
                 wx.showToast({
                     title: '请输入数字',
-                    icon: null,
+                    image: "/images/luchong/person-item1.png",
                     duration: 500,
                     mask: false
                 })
@@ -128,11 +128,11 @@ Page({
         this.setData({
             weight: e.detail.value
         })
-        console.log("this = " + JSON.stringify(this));
+        //console.log("this = " + JSON.stringify(this));
         if (isTooLong) {
             wx.showToast({
                 title: '太长啦',
-                icon: null,
+                image: "/images/luchong/person-item1.png",
                 duration: 500,
                 mask: false
             })
@@ -150,11 +150,12 @@ Page({
         if (isTooLong) {
             wx.showToast({
                 title: '太长啦',
+                image: "/images/luchong/person-item1.png",
                 duration: 500,
                 mask: false
             })
         }
-        console.log("this = " + JSON.stringify(this));
+        //console.log("this = " + JSON.stringify(this));
     },
 
     /**
@@ -231,7 +232,7 @@ Page({
      * 确定输入
      */
     confirmTap: function () {
-        console.log("confirmTap");
+        //console.log("confirmTap");
         var params = {
             service: 'luchong.pet.add',
             avatar: this.data.animal_avatar,
@@ -267,6 +268,7 @@ Page({
 
             wx.showToast({
                 title: toastString,
+                image: "/images/luchong/person-item1.png",
                 duration: 1000,
                 mask: false
             })
@@ -279,6 +281,15 @@ Page({
             },
             onSuccess: function (data) {
                 netUtil.hideLoadingDialog(that);
+                wx.showToast({
+                    title: '成功',  //标题
+                    image: "/images/luchong/person-item1.png",
+                    duration: 2000, //提示的延迟时间，单位毫秒，默认：1500
+                    mask: true,  //是否显示透明蒙层，防止触摸穿透，默认：false
+                    complete: function () {
+                        wx.navigateBack();
+                    } //接口调用结束的回调函数
+                })
 
             }, onError: function (msgCanShow, code, hiddenMsg) {
                 netUtil.hideLoadingDialog(that);

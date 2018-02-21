@@ -39,7 +39,7 @@ Page({
     this.wecropper.getCropperImage((avatar) => {
       if (avatar) {
         //console.log("avatar = " + avatar);
-        var fileName = app.globalData.openid + "_" + new Date().getTime() + "_" + Math.ceil(Math.random()*100) + ".png";
+        var fileName = "avatar_" + app.globalData.openid + "_" + new Date().getTime() + "_" + Math.ceil(Math.random()*100) + ".png";
         //console.log("fileName = " + fileName);
 
           netUtil.showLoadingDialog();
